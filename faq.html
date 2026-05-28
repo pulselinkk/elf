@@ -11,7 +11,7 @@
 <meta name="geo.region" content="US-TX"/>
 <meta name="geo.placename" content="Dallas-Fort Worth"/>
 <link rel="canonical" href="https://elf.repair/faq.html"/>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Cpath d='M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z' fill='%23d4a02a'/%3E%3Cpath d='M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z' fill='%23f0ede6'/%3E%3C/svg%3E"/>
+<link rel="icon" type="image/png" href="assets/brand/elf-home-services-logo.png"/>
 
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
@@ -31,7 +31,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 
-<link rel="stylesheet" href="styles.css?v=13"/>
+<link rel="stylesheet" href="styles.css?v=16"/>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -100,14 +100,7 @@
 <nav class="nav" role="navigation" aria-label="Main">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo" aria-label="ELF Home Services home">
-      <span class="nav-logo-mark" aria-hidden="true">
-        <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect width="64" height="64" rx="10" fill="#141414"/>
-          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
-          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
-          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
-        </svg>
-      </span>
+      <img src="assets/brand/elf-home-services-logo.png" alt="ELF Home Services logo" class="brand-logo-img"/>
       <span class="nav-logo-text">
         <span class="nav-logo-name">ELF</span>
         <span class="nav-logo-sub">Home Services</span>
@@ -267,14 +260,7 @@
 <div class="mobile-menu" aria-hidden="true">
   <div class="mobile-menu-hdr">
     <a href="index.html" class="nav-logo">
-      <span class="nav-logo-mark" aria-hidden="true">
-        <svg width="38" height="38" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect width="64" height="64" rx="10" fill="#141414"/>
-          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
-          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
-          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
-        </svg>
-      </span>
+      <img src="assets/brand/elf-home-services-logo.png" alt="ELF Home Services logo" class="brand-logo-img"/>
       <span class="nav-logo-text">
         <span class="nav-logo-name">ELF</span>
       </span>
@@ -507,19 +493,12 @@
   </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="footer-brand-logo">
-          <span class="nav-logo-mark" aria-hidden="true">
-            <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-          <rect width="64" height="64" rx="10" fill="#141414"/>
-          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
-          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
-          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
-        </svg>
-          </span>
+          <img src="assets/brand/elf-home-services-logo.png" alt="ELF Home Services logo" class="brand-logo-img"/>
           <span class="footer-brand-name">ELF Home Services</span>
         </div>
         <p class="footer-brand-desc">DFW's full-service home craftsmen. Licensed &amp; insured. Flat pricing, 1-year labor guarantee.</p>
@@ -531,8 +510,8 @@
         </div>
       </div>
 
-      <div>
-        <div class="footer-col-title">Services</div>
+      
+        <details class="footer-menu"><summary class="footer-col-title"><span>Services</span></summary><div class="footer-menu-links">
         <a href="services/painting.html" class="footer-link">Painting</a>
         <a href="services/drywall.html" class="footer-link">Drywall</a>
         <a href="services/tile.html" class="footer-link">Tile &amp; Backsplash</a>
@@ -541,21 +520,21 @@
         <a href="services/bathroom.html" class="footer-link">Bathroom Remodel</a>
         <a href="services/repairs.html" class="footer-link">General Repairs</a>
         <a href="services/appliances.html" class="footer-link">Appliance Repair</a>
-      </div>
+      </div></details>
 
-      <div>
-        <div class="footer-col-title">Resources</div>
+      
+        <details class="footer-menu"><summary class="footer-col-title"><span>Resources</span></summary><div class="footer-menu-links">
         <a href="hvac.html" class="footer-link">HVAC Guide</a>
         <a href="diy.html" class="footer-link">DIY Projects</a>
         <a href="maintenance.html" class="footer-link">Maintenance</a>
         <a href="pricing.html" class="footer-link">Pricing</a>
         <a href="faq.html" class="footer-link">FAQs</a>
         <a href="gallery.html" class="footer-link">Gallery</a>
-      </div>
+      </div></details>
 
       
-      <div>
-        <div class="footer-col-title">Locations</div>
+      
+        <details class="footer-menu"><summary class="footer-col-title"><span>Locations</span></summary><div class="footer-menu-links">
         <a href="locations/frisco.html" class="footer-link">Frisco</a>
         <a href="locations/plano.html" class="footer-link">Plano</a>
         <a href="locations/mckinney.html" class="footer-link">McKinney</a>
@@ -565,24 +544,24 @@
         <a href="locations/flower-mound.html" class="footer-link">Flower Mound</a>
         <a href="locations/southlake.html" class="footer-link">Southlake</a>
         <a href="service-areas.html" class="footer-link">All areas →</a>
-      </div>
+      </div></details>
 
-<div>
-        <div class="footer-col-title">Company</div>
+
+        <details class="footer-menu"><summary class="footer-col-title"><span>Company</span></summary><div class="footer-menu-links">
         <a href="about.html" class="footer-link">About Us</a>
         <a href="reviews.html" class="footer-link">Reviews</a>
         <a href="service-areas.html" class="footer-link">Service Areas</a>
         <a href="emergency.html" class="footer-link">Emergency</a>
         <a href="quote.html" class="footer-link">Free Estimate</a>
-      </div>
+      </div></details>
 
-      <div>
-        <div class="footer-col-title">Contact</div>
+      
+        <details class="footer-menu"><summary class="footer-col-title"><span>Contact</span></summary><div class="footer-menu-links">
         <a href="tel:+13235475086" class="footer-link">(323) 547-5086</a>
         <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="footer-link">WhatsApp</a>
         <p class="footer-link" style="cursor:default;">Mon–Sun 7AM–8PM</p>
         <p class="footer-link" style="cursor:default;">Denton &amp; North DFW</p>
-      </div>
+      </div></details>
     </div>
 
     <div class="footer-bottom">

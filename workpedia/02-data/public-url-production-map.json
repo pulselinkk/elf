@@ -1,0 +1,1000 @@
+{
+  "generatedAt": "2026-05-28",
+  "summary": {
+    "total": 130,
+    "byBucket": {
+      "home": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "about": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "diy": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "emergency": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "faq": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "gallery": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "guides": {
+        "total": 70,
+        "existing": 0,
+        "planned": 70
+      },
+      "hvac": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "locations": {
+        "total": 38,
+        "existing": 18,
+        "planned": 20
+      },
+      "maintenance": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "pricing": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "quote": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "reviews": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "service-areas": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      },
+      "services": {
+        "total": 9,
+        "existing": 9,
+        "planned": 0
+      },
+      "workpedia": {
+        "total": 1,
+        "existing": 1,
+        "planned": 0
+      }
+    }
+  },
+  "urls": [
+    {
+      "url": "/",
+      "bucket": "home",
+      "label": "ELF Home Services",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/about.html",
+      "bucket": "about",
+      "label": "About Us Our story",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/diy.html",
+      "bucket": "diy",
+      "label": "DIY Projects Step-by-step guides",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/emergency.html",
+      "bucket": "emergency",
+      "label": "Emergency Service Same-day urgent",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/faq.html",
+      "bucket": "faq",
+      "label": "FAQs Common questions",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/gallery.html",
+      "bucket": "gallery",
+      "label": "Project Gallery Our work",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/guides/annual-home-maintenance-north-texas.html",
+      "bucket": "guides",
+      "label": "Annual Home Maintenance TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/appliance-maintenance-monthly-checklist.html",
+      "bucket": "guides",
+      "label": "Maintenance Monthly Appliance Maintenance",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/backsplash-trends-open-kitchen-texas.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Backsplash Trends Open Kitchen TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/bathroom-designs-buyers-southlake.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Bathroom Designs Buyers Southlake",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/bathroom-flooring-trends-mckinney-2026.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Bathroom Flooring Trends 2026",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/bathroom-remodel-cost-north-texas.html",
+      "bucket": "guides",
+      "label": "Bathroom Remodel Cost TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/best-deck-materials-texas-summer.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Best Deck Materials Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/best-tile-kitchen-plano-frisco.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Best Tile Styles Plano & Frisco",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/cabinet-colors-best-resale-value-dfw.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Cabinet Colors Best Resale DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/cabinet-painting-cost-vs-replacement.html",
+      "bucket": "guides",
+      "label": "Cost Guide Cabinet Painting vs Replacing",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/checklist-prepare-home-for-sale-dfw.html",
+      "bucket": "guides",
+      "label": "Prepare Home for Sale DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/deck-maintenance-schedule-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Deck Maintenance Schedule Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/deck-refinishing-cost-texas.html",
+      "bucket": "guides",
+      "label": "Cost Guide Deck Refinishing Cost Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/deck-refinishing-diy-vs-professional.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Deck Refinishing: DIY vs Professional",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/drywall-repair-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Drywall Repair Cost DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/drywall-repair-diy-vs-professional.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Drywall Repair: DIY vs Professional",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/extend-life-kitchen-remodel.html",
+      "bucket": "guides",
+      "label": "Maintenance Extend Life of Kitchen Remodel",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/exterior-paint-maintenance-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Exterior Paint Maintenance Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/fence-repair-yourself-what-works.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Fence Repair Yourself: What Works",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/foundation-cracks-drywall-repair-texas.html",
+      "bucket": "guides",
+      "label": "Foundation Cracks & Drywall TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/handyman-hourly-rate-dfw-2026.html",
+      "bucket": "guides",
+      "label": "Cost Guide Handyman Rates DFW 2026",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/hard-water-tile-stains-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Hard Water Tile Stains Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/hardwood-floor-maintenance-texas-humidity.html",
+      "bucket": "guides",
+      "label": "Maintenance Hardwood Floor Maintenance TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/hoa-approved-improvements-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem HOA Approved Improvements DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/home-renovation-cost-guide-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Home Renovation Cost Guide DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/home-upgrades-roi-selling-dfw.html",
+      "bucket": "guides",
+      "label": "Home Upgrades ROI Selling DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/how-to-tell-if-grout-needs-replacing.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs Your Grout Needs Replacing",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/humidity-bathroom-tile-problems-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem Humidity & Tile Problems DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/install-lvp-yourself-common-mistakes.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Install LVP Yourself: Common Mistakes",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/interior-painting-cost-per-room-dfw.html",
+      "bucket": "guides",
+      "label": "Painting Cost Per Room DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/kitchen-remodel-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Kitchen Remodel Cost DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/kitchen-trends-dfw-2026.html",
+      "bucket": "guides",
+      "label": "Kitchen Trends DFW 2026",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/lvp-flooring-cost-per-sqft-texas.html",
+      "bucket": "guides",
+      "label": "Cost Guide LVP Flooring Cost Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/lvp-vs-hardwood-2026-dfw.html",
+      "bucket": "guides",
+      "label": "Trends 2026 LVP vs Hardwood DFW 2026",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/maintain-grout-without-replacing.html",
+      "bucket": "guides",
+      "label": "Maintenance Maintain Grout Without Replacing",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/new-construction-punch-list-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem New Construction Punch List DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/paint-kitchen-cabinets-without-sprayer.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Paint Cabinets Without a Sprayer",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/painting-yourself-vs-hiring-contractor.html",
+      "bucket": "guides",
+      "label": "DIY Painting vs Contractor",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/popcorn-ceiling-asbestos-north-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Popcorn Ceiling Asbestos North TX",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/popular-paint-colors-north-texas-2026.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Popular Paint Colors TX 2026",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/prepare-home-summer-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Prepare Home for Texas Summer",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/prepare-home-winter-dfw.html",
+      "bucket": "guides",
+      "label": "Maintenance Prepare Home for DFW Winter",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/prevent-bathroom-water-damage.html",
+      "bucket": "guides",
+      "label": "Maintenance Prevent Bathroom Water Damage",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/sand-hardwood-floors-yourself-truth.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Sand Hardwood Floors Yourself: Truth",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/signs-deck-needs-replacement-vs-repair.html",
+      "bucket": "guides",
+      "label": "How-To Guide Deck Repair vs Replacement Signs",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/signs-drywall-has-water-damage.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs of Drywall Water Damage",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/signs-wood-floor-needs-refinishing.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs Hardwood Needs Refinishing",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/slab-foundation-home-repairs-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem Slab Foundation Home Repairs",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/storm-damage-repairs-north-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Storm Damage Repairs DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/texas-summer-heat-paint-peeling-fix.html",
+      "bucket": "guides",
+      "label": "Texas Problem Paint Peeling in Texas Heat",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/tile-backsplash-diy-guide.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro DIY Tile Backsplash: Honest Guide",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/tile-installation-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Tile Installation Cost DFW",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/tipos-de-pintura-para-interiores-texas.html",
+      "bucket": "guides",
+      "label": "Material Guide Tipos de Pintura · Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/tree-root-fence-damage-dallas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Tree Root Fence Damage Dallas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-backsplash-subway-herringbone-mosaic.html",
+      "bucket": "guides",
+      "label": "Material Guide Backsplash Types Guide",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-bathroom-vanity-floating-freestanding.html",
+      "bucket": "guides",
+      "label": "Material Guide Bathroom Vanity Types",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-deck-stain-solid-vs-semitransparent.html",
+      "bucket": "guides",
+      "label": "Material Guide Deck Stain Types Guide",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-drywall-moisture-fire-soundproof.html",
+      "bucket": "guides",
+      "label": "Material Guide Types of Drywall Explained",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-grout-sanded-vs-unsanded-epoxy.html",
+      "bucket": "guides",
+      "label": "Material Guide Grout Types: Sanded vs Epoxy",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-interior-paint-finishes.html",
+      "bucket": "guides",
+      "label": "Interior Paint Finishes Guide",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-kitchen-cabinet-materials.html",
+      "bucket": "guides",
+      "label": "Material Guide Kitchen Cabinet Materials",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-lvp-flooring-wear-layer-guide.html",
+      "bucket": "guides",
+      "label": "Material Guide Types of LVP Flooring",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/types-of-tile-porcelain-ceramic-stone.html",
+      "bucket": "guides",
+      "label": "Material Guide Tile Types: Porcelain vs Ceramic",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/waterproof-shower-diy-vs-contractor.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Waterproof Shower: DIY vs Contractor",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-diy-costs-more-than-hiring-pro.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro When DIY Costs More Than Hiring Pro",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-does-kitchen-remodel-make-sense.html",
+      "bucket": "guides",
+      "label": "How-To Guide When Kitchen Remodel Makes Sense",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-to-hire-handyman-vs-contractor.html",
+      "bucket": "guides",
+      "label": "How-To Guide Handyman vs General Contractor",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-to-repaint-exterior-house-texas.html",
+      "bucket": "guides",
+      "label": "How-To Guide When to Repaint Exterior Texas",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-to-replace-bathroom-tile.html",
+      "bucket": "guides",
+      "label": "How-To Guide When to Replace Bathroom Tile",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/guides/when-to-replace-vs-repair-flooring.html",
+      "bucket": "guides",
+      "label": "How-To Guide Replace vs Repair Flooring",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/hvac.html",
+      "bucket": "hvac",
+      "label": "HVAC Guide Heating & cooling",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/allen.html",
+      "bucket": "locations",
+      "label": "Allen",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/bathroom-remodel-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Allen",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/bathroom-remodel-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Frisco",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/bathroom-remodel-lewisville-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Lewisville",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/bathroom-remodel-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Bathroom Remodel · McKinney",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/bathroom-remodel-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Southlake",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/cabinet-refinishing-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Cabinet Refinishing · Frisco",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/cabinet-refinishing-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Cabinet Refinishing · Plano",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/denton.html",
+      "bucket": "locations",
+      "label": "Denton",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/drywall-repair-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Drywall Repair · Frisco",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/drywall-repair-lewisville-tx.html",
+      "bucket": "locations",
+      "label": "Drywall Repair · Lewisville",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/drywall-repair-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Drywall Repair · McKinney",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/emergency-handyman-denton-tx.html",
+      "bucket": "locations",
+      "label": "Emergency Service · Denton",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/flooring-installation-denton-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Flooring Installation · Denton",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/flooring-installation-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Flooring Installation · McKinney",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/flower-mound.html",
+      "bucket": "locations",
+      "label": "Flower Mound",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/frisco.html",
+      "bucket": "locations",
+      "label": "Frisco",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/handyman-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · Allen",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/handyman-denton-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · Denton",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/handyman-flower-mound-tx.html",
+      "bucket": "locations",
+      "label": "Handyman · Flower Mound",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/handyman-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · McKinney",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/hardwood-flooring-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Hardwood Flooring · Plano",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/kitchen-remodel-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Allen",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/kitchen-remodel-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Kitchen Remodel · Frisco",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/kitchen-remodel-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Plano",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/kitchen-remodel-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Southlake",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/lewisville.html",
+      "bucket": "locations",
+      "label": "Lewisville",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/lvp-flooring-installation-frisco.html",
+      "bucket": "locations",
+      "label": "LVP Flooring · Frisco",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/mckinney.html",
+      "bucket": "locations",
+      "label": "McKinney",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/painting-contractor-denton-tx.html",
+      "bucket": "locations",
+      "label": "Painting Contractor · Denton",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/painting-contractor-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Painting Contractor · Frisco",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/painting-contractor-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Painting Contractor · Plano",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/plano.html",
+      "bucket": "locations",
+      "label": "Plano",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/popcorn-ceiling-removal-dallas.html",
+      "bucket": "locations",
+      "label": "Popcorn Ceiling Removal · Dallas",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/southlake.html",
+      "bucket": "locations",
+      "label": "Southlake",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/tile-installation-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Tile Installation · Frisco",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/locations/tile-installation-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Tile Installation · McKinney",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/locations/tile-installation-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Tile Installation · Southlake",
+      "fileExists": false,
+      "productionStatus": "planned-url"
+    },
+    {
+      "url": "/maintenance.html",
+      "bucket": "maintenance",
+      "label": "Home Maintenance Seasonal checklists",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/pricing.html",
+      "bucket": "pricing",
+      "label": "Pricing Guide Transparent rates",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/quote.html",
+      "bucket": "quote",
+      "label": "Free Estimate",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/reviews.html",
+      "bucket": "reviews",
+      "label": "Reviews 200+ 5-star reviews",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/service-areas.html",
+      "bucket": "service-areas",
+      "label": "ALL LOCAL GUIDES",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services.html",
+      "bucket": "services",
+      "label": "See all services",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/appliances.html",
+      "bucket": "services",
+      "label": "Appliance Repair Washer, dryer, fridge",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/bathroom.html",
+      "bucket": "services",
+      "label": "Bathroom Remodel Showers & vanities",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/drywall.html",
+      "bucket": "services",
+      "label": "Drywall Repair & texture",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/flooring.html",
+      "bucket": "services",
+      "label": "Flooring Hardwood, LVP, tile",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/kitchen.html",
+      "bucket": "services",
+      "label": "Kitchen Remodel Full renovation",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/painting.html",
+      "bucket": "services",
+      "label": "Painting Interior & exterior",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/repairs.html",
+      "bucket": "services",
+      "label": "General Repairs Doors, windows, trim",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/services/tile.html",
+      "bucket": "services",
+      "label": "Tile & Backsplash Any surface",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    },
+    {
+      "url": "/workpedia/",
+      "bucket": "workpedia",
+      "label": "Workpedia DFW repair encyclopedia",
+      "fileExists": true,
+      "productionStatus": "published-file"
+    }
+  ]
+}

@@ -1,0 +1,810 @@
+{
+  "generatedAt": "2026-05-28",
+  "source": "index.html publishable internal anchors",
+  "totalUnique": 130,
+  "coverageAgainstSitemap": {
+    "sitemapUrls": 130,
+    "missingFromSitemap": [],
+    "duplicatesInSitemap": []
+  },
+  "counts": {
+    "home": 1,
+    "about": 1,
+    "diy": 1,
+    "emergency": 1,
+    "faq": 1,
+    "gallery": 1,
+    "guides": 70,
+    "hvac": 1,
+    "locations": 38,
+    "maintenance": 1,
+    "pricing": 1,
+    "quote": 1,
+    "reviews": 1,
+    "service-areas": 1,
+    "services": 9,
+    "workpedia": 1
+  },
+  "links": [
+    {
+      "url": "/",
+      "rawHref": "index.html",
+      "bucket": "home",
+      "label": "ELF Home Services"
+    },
+    {
+      "url": "/about.html",
+      "rawHref": "about.html",
+      "bucket": "about",
+      "label": "About Us Our story"
+    },
+    {
+      "url": "/diy.html",
+      "rawHref": "diy.html",
+      "bucket": "diy",
+      "label": "DIY Projects Step-by-step guides"
+    },
+    {
+      "url": "/emergency.html",
+      "rawHref": "emergency.html",
+      "bucket": "emergency",
+      "label": "Emergency Service Same-day urgent"
+    },
+    {
+      "url": "/faq.html",
+      "rawHref": "faq.html",
+      "bucket": "faq",
+      "label": "FAQs Common questions"
+    },
+    {
+      "url": "/gallery.html",
+      "rawHref": "gallery.html",
+      "bucket": "gallery",
+      "label": "Project Gallery Our work"
+    },
+    {
+      "url": "/guides/annual-home-maintenance-north-texas.html",
+      "rawHref": "guides/annual-home-maintenance-north-texas.html",
+      "bucket": "guides",
+      "label": "Annual Home Maintenance TX"
+    },
+    {
+      "url": "/guides/appliance-maintenance-monthly-checklist.html",
+      "rawHref": "guides/appliance-maintenance-monthly-checklist.html",
+      "bucket": "guides",
+      "label": "Maintenance Monthly Appliance Maintenance"
+    },
+    {
+      "url": "/guides/backsplash-trends-open-kitchen-texas.html",
+      "rawHref": "guides/backsplash-trends-open-kitchen-texas.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Backsplash Trends Open Kitchen TX"
+    },
+    {
+      "url": "/guides/bathroom-designs-buyers-southlake.html",
+      "rawHref": "guides/bathroom-designs-buyers-southlake.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Bathroom Designs Buyers Southlake"
+    },
+    {
+      "url": "/guides/bathroom-flooring-trends-mckinney-2026.html",
+      "rawHref": "guides/bathroom-flooring-trends-mckinney-2026.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Bathroom Flooring Trends 2026"
+    },
+    {
+      "url": "/guides/bathroom-remodel-cost-north-texas.html",
+      "rawHref": "guides/bathroom-remodel-cost-north-texas.html",
+      "bucket": "guides",
+      "label": "Bathroom Remodel Cost TX"
+    },
+    {
+      "url": "/guides/best-deck-materials-texas-summer.html",
+      "rawHref": "guides/best-deck-materials-texas-summer.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Best Deck Materials Texas"
+    },
+    {
+      "url": "/guides/best-tile-kitchen-plano-frisco.html",
+      "rawHref": "guides/best-tile-kitchen-plano-frisco.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Best Tile Styles Plano & Frisco"
+    },
+    {
+      "url": "/guides/cabinet-colors-best-resale-value-dfw.html",
+      "rawHref": "guides/cabinet-colors-best-resale-value-dfw.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Cabinet Colors Best Resale DFW"
+    },
+    {
+      "url": "/guides/cabinet-painting-cost-vs-replacement.html",
+      "rawHref": "guides/cabinet-painting-cost-vs-replacement.html",
+      "bucket": "guides",
+      "label": "Cost Guide Cabinet Painting vs Replacing"
+    },
+    {
+      "url": "/guides/checklist-prepare-home-for-sale-dfw.html",
+      "rawHref": "guides/checklist-prepare-home-for-sale-dfw.html",
+      "bucket": "guides",
+      "label": "Prepare Home for Sale DFW"
+    },
+    {
+      "url": "/guides/deck-maintenance-schedule-texas.html",
+      "rawHref": "guides/deck-maintenance-schedule-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Deck Maintenance Schedule Texas"
+    },
+    {
+      "url": "/guides/deck-refinishing-cost-texas.html",
+      "rawHref": "guides/deck-refinishing-cost-texas.html",
+      "bucket": "guides",
+      "label": "Cost Guide Deck Refinishing Cost Texas"
+    },
+    {
+      "url": "/guides/deck-refinishing-diy-vs-professional.html",
+      "rawHref": "guides/deck-refinishing-diy-vs-professional.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Deck Refinishing: DIY vs Professional"
+    },
+    {
+      "url": "/guides/drywall-repair-cost-dfw.html",
+      "rawHref": "guides/drywall-repair-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Drywall Repair Cost DFW"
+    },
+    {
+      "url": "/guides/drywall-repair-diy-vs-professional.html",
+      "rawHref": "guides/drywall-repair-diy-vs-professional.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Drywall Repair: DIY vs Professional"
+    },
+    {
+      "url": "/guides/extend-life-kitchen-remodel.html",
+      "rawHref": "guides/extend-life-kitchen-remodel.html",
+      "bucket": "guides",
+      "label": "Maintenance Extend Life of Kitchen Remodel"
+    },
+    {
+      "url": "/guides/exterior-paint-maintenance-texas.html",
+      "rawHref": "guides/exterior-paint-maintenance-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Exterior Paint Maintenance Texas"
+    },
+    {
+      "url": "/guides/fence-repair-yourself-what-works.html",
+      "rawHref": "guides/fence-repair-yourself-what-works.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Fence Repair Yourself: What Works"
+    },
+    {
+      "url": "/guides/foundation-cracks-drywall-repair-texas.html",
+      "rawHref": "guides/foundation-cracks-drywall-repair-texas.html",
+      "bucket": "guides",
+      "label": "Foundation Cracks & Drywall TX"
+    },
+    {
+      "url": "/guides/handyman-hourly-rate-dfw-2026.html",
+      "rawHref": "guides/handyman-hourly-rate-dfw-2026.html",
+      "bucket": "guides",
+      "label": "Cost Guide Handyman Rates DFW 2026"
+    },
+    {
+      "url": "/guides/hard-water-tile-stains-texas.html",
+      "rawHref": "guides/hard-water-tile-stains-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Hard Water Tile Stains Texas"
+    },
+    {
+      "url": "/guides/hardwood-floor-maintenance-texas-humidity.html",
+      "rawHref": "guides/hardwood-floor-maintenance-texas-humidity.html",
+      "bucket": "guides",
+      "label": "Maintenance Hardwood Floor Maintenance TX"
+    },
+    {
+      "url": "/guides/hoa-approved-improvements-dfw.html",
+      "rawHref": "guides/hoa-approved-improvements-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem HOA Approved Improvements DFW"
+    },
+    {
+      "url": "/guides/home-renovation-cost-guide-dfw.html",
+      "rawHref": "guides/home-renovation-cost-guide-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Home Renovation Cost Guide DFW"
+    },
+    {
+      "url": "/guides/home-upgrades-roi-selling-dfw.html",
+      "rawHref": "guides/home-upgrades-roi-selling-dfw.html",
+      "bucket": "guides",
+      "label": "Home Upgrades ROI Selling DFW"
+    },
+    {
+      "url": "/guides/how-to-tell-if-grout-needs-replacing.html",
+      "rawHref": "guides/how-to-tell-if-grout-needs-replacing.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs Your Grout Needs Replacing"
+    },
+    {
+      "url": "/guides/humidity-bathroom-tile-problems-dfw.html",
+      "rawHref": "guides/humidity-bathroom-tile-problems-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem Humidity & Tile Problems DFW"
+    },
+    {
+      "url": "/guides/install-lvp-yourself-common-mistakes.html",
+      "rawHref": "guides/install-lvp-yourself-common-mistakes.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Install LVP Yourself: Common Mistakes"
+    },
+    {
+      "url": "/guides/interior-painting-cost-per-room-dfw.html",
+      "rawHref": "guides/interior-painting-cost-per-room-dfw.html",
+      "bucket": "guides",
+      "label": "Painting Cost Per Room DFW"
+    },
+    {
+      "url": "/guides/kitchen-remodel-cost-dfw.html",
+      "rawHref": "guides/kitchen-remodel-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Kitchen Remodel Cost DFW"
+    },
+    {
+      "url": "/guides/kitchen-trends-dfw-2026.html",
+      "rawHref": "guides/kitchen-trends-dfw-2026.html",
+      "bucket": "guides",
+      "label": "Kitchen Trends DFW 2026"
+    },
+    {
+      "url": "/guides/lvp-flooring-cost-per-sqft-texas.html",
+      "rawHref": "guides/lvp-flooring-cost-per-sqft-texas.html",
+      "bucket": "guides",
+      "label": "Cost Guide LVP Flooring Cost Texas"
+    },
+    {
+      "url": "/guides/lvp-vs-hardwood-2026-dfw.html",
+      "rawHref": "guides/lvp-vs-hardwood-2026-dfw.html",
+      "bucket": "guides",
+      "label": "Trends 2026 LVP vs Hardwood DFW 2026"
+    },
+    {
+      "url": "/guides/maintain-grout-without-replacing.html",
+      "rawHref": "guides/maintain-grout-without-replacing.html",
+      "bucket": "guides",
+      "label": "Maintenance Maintain Grout Without Replacing"
+    },
+    {
+      "url": "/guides/new-construction-punch-list-dfw.html",
+      "rawHref": "guides/new-construction-punch-list-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem New Construction Punch List DFW"
+    },
+    {
+      "url": "/guides/paint-kitchen-cabinets-without-sprayer.html",
+      "rawHref": "guides/paint-kitchen-cabinets-without-sprayer.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Paint Cabinets Without a Sprayer"
+    },
+    {
+      "url": "/guides/painting-yourself-vs-hiring-contractor.html",
+      "rawHref": "guides/painting-yourself-vs-hiring-contractor.html",
+      "bucket": "guides",
+      "label": "DIY Painting vs Contractor"
+    },
+    {
+      "url": "/guides/popcorn-ceiling-asbestos-north-texas.html",
+      "rawHref": "guides/popcorn-ceiling-asbestos-north-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Popcorn Ceiling Asbestos North TX"
+    },
+    {
+      "url": "/guides/popular-paint-colors-north-texas-2026.html",
+      "rawHref": "guides/popular-paint-colors-north-texas-2026.html",
+      "bucket": "guides",
+      "label": "Trends 2026 Popular Paint Colors TX 2026"
+    },
+    {
+      "url": "/guides/prepare-home-summer-texas.html",
+      "rawHref": "guides/prepare-home-summer-texas.html",
+      "bucket": "guides",
+      "label": "Maintenance Prepare Home for Texas Summer"
+    },
+    {
+      "url": "/guides/prepare-home-winter-dfw.html",
+      "rawHref": "guides/prepare-home-winter-dfw.html",
+      "bucket": "guides",
+      "label": "Maintenance Prepare Home for DFW Winter"
+    },
+    {
+      "url": "/guides/prevent-bathroom-water-damage.html",
+      "rawHref": "guides/prevent-bathroom-water-damage.html",
+      "bucket": "guides",
+      "label": "Maintenance Prevent Bathroom Water Damage"
+    },
+    {
+      "url": "/guides/sand-hardwood-floors-yourself-truth.html",
+      "rawHref": "guides/sand-hardwood-floors-yourself-truth.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Sand Hardwood Floors Yourself: Truth"
+    },
+    {
+      "url": "/guides/signs-deck-needs-replacement-vs-repair.html",
+      "rawHref": "guides/signs-deck-needs-replacement-vs-repair.html",
+      "bucket": "guides",
+      "label": "How-To Guide Deck Repair vs Replacement Signs"
+    },
+    {
+      "url": "/guides/signs-drywall-has-water-damage.html",
+      "rawHref": "guides/signs-drywall-has-water-damage.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs of Drywall Water Damage"
+    },
+    {
+      "url": "/guides/signs-wood-floor-needs-refinishing.html",
+      "rawHref": "guides/signs-wood-floor-needs-refinishing.html",
+      "bucket": "guides",
+      "label": "How-To Guide Signs Hardwood Needs Refinishing"
+    },
+    {
+      "url": "/guides/slab-foundation-home-repairs-dfw.html",
+      "rawHref": "guides/slab-foundation-home-repairs-dfw.html",
+      "bucket": "guides",
+      "label": "Texas Problem Slab Foundation Home Repairs"
+    },
+    {
+      "url": "/guides/storm-damage-repairs-north-texas.html",
+      "rawHref": "guides/storm-damage-repairs-north-texas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Storm Damage Repairs DFW"
+    },
+    {
+      "url": "/guides/texas-summer-heat-paint-peeling-fix.html",
+      "rawHref": "guides/texas-summer-heat-paint-peeling-fix.html",
+      "bucket": "guides",
+      "label": "Texas Problem Paint Peeling in Texas Heat"
+    },
+    {
+      "url": "/guides/tile-backsplash-diy-guide.html",
+      "rawHref": "guides/tile-backsplash-diy-guide.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro DIY Tile Backsplash: Honest Guide"
+    },
+    {
+      "url": "/guides/tile-installation-cost-dfw.html",
+      "rawHref": "guides/tile-installation-cost-dfw.html",
+      "bucket": "guides",
+      "label": "Cost Guide Tile Installation Cost DFW"
+    },
+    {
+      "url": "/guides/tipos-de-pintura-para-interiores-texas.html",
+      "rawHref": "guides/tipos-de-pintura-para-interiores-texas.html",
+      "bucket": "guides",
+      "label": "Material Guide Tipos de Pintura · Texas"
+    },
+    {
+      "url": "/guides/tree-root-fence-damage-dallas.html",
+      "rawHref": "guides/tree-root-fence-damage-dallas.html",
+      "bucket": "guides",
+      "label": "Texas Problem Tree Root Fence Damage Dallas"
+    },
+    {
+      "url": "/guides/types-of-backsplash-subway-herringbone-mosaic.html",
+      "rawHref": "guides/types-of-backsplash-subway-herringbone-mosaic.html",
+      "bucket": "guides",
+      "label": "Material Guide Backsplash Types Guide"
+    },
+    {
+      "url": "/guides/types-of-bathroom-vanity-floating-freestanding.html",
+      "rawHref": "guides/types-of-bathroom-vanity-floating-freestanding.html",
+      "bucket": "guides",
+      "label": "Material Guide Bathroom Vanity Types"
+    },
+    {
+      "url": "/guides/types-of-deck-stain-solid-vs-semitransparent.html",
+      "rawHref": "guides/types-of-deck-stain-solid-vs-semitransparent.html",
+      "bucket": "guides",
+      "label": "Material Guide Deck Stain Types Guide"
+    },
+    {
+      "url": "/guides/types-of-drywall-moisture-fire-soundproof.html",
+      "rawHref": "guides/types-of-drywall-moisture-fire-soundproof.html",
+      "bucket": "guides",
+      "label": "Material Guide Types of Drywall Explained"
+    },
+    {
+      "url": "/guides/types-of-grout-sanded-vs-unsanded-epoxy.html",
+      "rawHref": "guides/types-of-grout-sanded-vs-unsanded-epoxy.html",
+      "bucket": "guides",
+      "label": "Material Guide Grout Types: Sanded vs Epoxy"
+    },
+    {
+      "url": "/guides/types-of-interior-paint-finishes.html",
+      "rawHref": "guides/types-of-interior-paint-finishes.html",
+      "bucket": "guides",
+      "label": "Interior Paint Finishes Guide"
+    },
+    {
+      "url": "/guides/types-of-kitchen-cabinet-materials.html",
+      "rawHref": "guides/types-of-kitchen-cabinet-materials.html",
+      "bucket": "guides",
+      "label": "Material Guide Kitchen Cabinet Materials"
+    },
+    {
+      "url": "/guides/types-of-lvp-flooring-wear-layer-guide.html",
+      "rawHref": "guides/types-of-lvp-flooring-wear-layer-guide.html",
+      "bucket": "guides",
+      "label": "Material Guide Types of LVP Flooring"
+    },
+    {
+      "url": "/guides/types-of-tile-porcelain-ceramic-stone.html",
+      "rawHref": "guides/types-of-tile-porcelain-ceramic-stone.html",
+      "bucket": "guides",
+      "label": "Material Guide Tile Types: Porcelain vs Ceramic"
+    },
+    {
+      "url": "/guides/waterproof-shower-diy-vs-contractor.html",
+      "rawHref": "guides/waterproof-shower-diy-vs-contractor.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro Waterproof Shower: DIY vs Contractor"
+    },
+    {
+      "url": "/guides/when-diy-costs-more-than-hiring-pro.html",
+      "rawHref": "guides/when-diy-costs-more-than-hiring-pro.html",
+      "bucket": "guides",
+      "label": "DIY vs Pro When DIY Costs More Than Hiring Pro"
+    },
+    {
+      "url": "/guides/when-does-kitchen-remodel-make-sense.html",
+      "rawHref": "guides/when-does-kitchen-remodel-make-sense.html",
+      "bucket": "guides",
+      "label": "How-To Guide When Kitchen Remodel Makes Sense"
+    },
+    {
+      "url": "/guides/when-to-hire-handyman-vs-contractor.html",
+      "rawHref": "guides/when-to-hire-handyman-vs-contractor.html",
+      "bucket": "guides",
+      "label": "How-To Guide Handyman vs General Contractor"
+    },
+    {
+      "url": "/guides/when-to-repaint-exterior-house-texas.html",
+      "rawHref": "guides/when-to-repaint-exterior-house-texas.html",
+      "bucket": "guides",
+      "label": "How-To Guide When to Repaint Exterior Texas"
+    },
+    {
+      "url": "/guides/when-to-replace-bathroom-tile.html",
+      "rawHref": "guides/when-to-replace-bathroom-tile.html",
+      "bucket": "guides",
+      "label": "How-To Guide When to Replace Bathroom Tile"
+    },
+    {
+      "url": "/guides/when-to-replace-vs-repair-flooring.html",
+      "rawHref": "guides/when-to-replace-vs-repair-flooring.html",
+      "bucket": "guides",
+      "label": "How-To Guide Replace vs Repair Flooring"
+    },
+    {
+      "url": "/hvac.html",
+      "rawHref": "hvac.html",
+      "bucket": "hvac",
+      "label": "HVAC Guide Heating & cooling"
+    },
+    {
+      "url": "/locations/allen.html",
+      "rawHref": "locations/allen.html",
+      "bucket": "locations",
+      "label": "Allen"
+    },
+    {
+      "url": "/locations/bathroom-remodel-allen-tx.html",
+      "rawHref": "locations/bathroom-remodel-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Allen"
+    },
+    {
+      "url": "/locations/bathroom-remodel-frisco-tx.html",
+      "rawHref": "locations/bathroom-remodel-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Frisco"
+    },
+    {
+      "url": "/locations/bathroom-remodel-lewisville-tx.html",
+      "rawHref": "locations/bathroom-remodel-lewisville-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Lewisville"
+    },
+    {
+      "url": "/locations/bathroom-remodel-mckinney-tx.html",
+      "rawHref": "locations/bathroom-remodel-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Bathroom Remodel · McKinney"
+    },
+    {
+      "url": "/locations/bathroom-remodel-southlake-tx.html",
+      "rawHref": "locations/bathroom-remodel-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Bathroom Remodel · Southlake"
+    },
+    {
+      "url": "/locations/cabinet-refinishing-frisco-tx.html",
+      "rawHref": "locations/cabinet-refinishing-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Cabinet Refinishing · Frisco"
+    },
+    {
+      "url": "/locations/cabinet-refinishing-plano-tx.html",
+      "rawHref": "locations/cabinet-refinishing-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Cabinet Refinishing · Plano"
+    },
+    {
+      "url": "/locations/denton.html",
+      "rawHref": "locations/denton.html",
+      "bucket": "locations",
+      "label": "Denton"
+    },
+    {
+      "url": "/locations/drywall-repair-frisco-tx.html",
+      "rawHref": "locations/drywall-repair-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Drywall Repair · Frisco"
+    },
+    {
+      "url": "/locations/drywall-repair-lewisville-tx.html",
+      "rawHref": "locations/drywall-repair-lewisville-tx.html",
+      "bucket": "locations",
+      "label": "Drywall Repair · Lewisville"
+    },
+    {
+      "url": "/locations/drywall-repair-mckinney-tx.html",
+      "rawHref": "locations/drywall-repair-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Drywall Repair · McKinney"
+    },
+    {
+      "url": "/locations/emergency-handyman-denton-tx.html",
+      "rawHref": "locations/emergency-handyman-denton-tx.html",
+      "bucket": "locations",
+      "label": "Emergency Service · Denton"
+    },
+    {
+      "url": "/locations/flooring-installation-denton-tx.html",
+      "rawHref": "locations/flooring-installation-denton-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Flooring Installation · Denton"
+    },
+    {
+      "url": "/locations/flooring-installation-mckinney-tx.html",
+      "rawHref": "locations/flooring-installation-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Flooring Installation · McKinney"
+    },
+    {
+      "url": "/locations/flower-mound.html",
+      "rawHref": "locations/flower-mound.html",
+      "bucket": "locations",
+      "label": "Flower Mound"
+    },
+    {
+      "url": "/locations/frisco.html",
+      "rawHref": "locations/frisco.html",
+      "bucket": "locations",
+      "label": "Frisco"
+    },
+    {
+      "url": "/locations/handyman-allen-tx.html",
+      "rawHref": "locations/handyman-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · Allen"
+    },
+    {
+      "url": "/locations/handyman-denton-tx.html",
+      "rawHref": "locations/handyman-denton-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · Denton"
+    },
+    {
+      "url": "/locations/handyman-flower-mound-tx.html",
+      "rawHref": "locations/handyman-flower-mound-tx.html",
+      "bucket": "locations",
+      "label": "Handyman · Flower Mound"
+    },
+    {
+      "url": "/locations/handyman-mckinney-tx.html",
+      "rawHref": "locations/handyman-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Handyman Services · McKinney"
+    },
+    {
+      "url": "/locations/hardwood-flooring-plano-tx.html",
+      "rawHref": "locations/hardwood-flooring-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Hardwood Flooring · Plano"
+    },
+    {
+      "url": "/locations/kitchen-remodel-allen-tx.html",
+      "rawHref": "locations/kitchen-remodel-allen-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Allen"
+    },
+    {
+      "url": "/locations/kitchen-remodel-frisco-tx.html",
+      "rawHref": "locations/kitchen-remodel-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Kitchen Remodel · Frisco"
+    },
+    {
+      "url": "/locations/kitchen-remodel-plano-tx.html",
+      "rawHref": "locations/kitchen-remodel-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Plano"
+    },
+    {
+      "url": "/locations/kitchen-remodel-southlake-tx.html",
+      "rawHref": "locations/kitchen-remodel-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Kitchen Remodel · Southlake"
+    },
+    {
+      "url": "/locations/lewisville.html",
+      "rawHref": "locations/lewisville.html",
+      "bucket": "locations",
+      "label": "Lewisville"
+    },
+    {
+      "url": "/locations/lvp-flooring-installation-frisco.html",
+      "rawHref": "locations/lvp-flooring-installation-frisco.html",
+      "bucket": "locations",
+      "label": "LVP Flooring · Frisco"
+    },
+    {
+      "url": "/locations/mckinney.html",
+      "rawHref": "locations/mckinney.html",
+      "bucket": "locations",
+      "label": "McKinney"
+    },
+    {
+      "url": "/locations/painting-contractor-denton-tx.html",
+      "rawHref": "locations/painting-contractor-denton-tx.html",
+      "bucket": "locations",
+      "label": "Painting Contractor · Denton"
+    },
+    {
+      "url": "/locations/painting-contractor-frisco-tx.html",
+      "rawHref": "locations/painting-contractor-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Painting Contractor · Frisco"
+    },
+    {
+      "url": "/locations/painting-contractor-plano-tx.html",
+      "rawHref": "locations/painting-contractor-plano-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Painting Contractor · Plano"
+    },
+    {
+      "url": "/locations/plano.html",
+      "rawHref": "locations/plano.html",
+      "bucket": "locations",
+      "label": "Plano"
+    },
+    {
+      "url": "/locations/popcorn-ceiling-removal-dallas.html",
+      "rawHref": "locations/popcorn-ceiling-removal-dallas.html",
+      "bucket": "locations",
+      "label": "Popcorn Ceiling Removal · Dallas"
+    },
+    {
+      "url": "/locations/southlake.html",
+      "rawHref": "locations/southlake.html",
+      "bucket": "locations",
+      "label": "Southlake"
+    },
+    {
+      "url": "/locations/tile-installation-frisco-tx.html",
+      "rawHref": "locations/tile-installation-frisco-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Tile Installation · Frisco"
+    },
+    {
+      "url": "/locations/tile-installation-mckinney-tx.html",
+      "rawHref": "locations/tile-installation-mckinney-tx.html",
+      "bucket": "locations",
+      "label": "Tile Installation · McKinney"
+    },
+    {
+      "url": "/locations/tile-installation-southlake-tx.html",
+      "rawHref": "locations/tile-installation-southlake-tx.html",
+      "bucket": "locations",
+      "label": "Local Guide Tile Installation · Southlake"
+    },
+    {
+      "url": "/maintenance.html",
+      "rawHref": "maintenance.html",
+      "bucket": "maintenance",
+      "label": "Home Maintenance Seasonal checklists"
+    },
+    {
+      "url": "/pricing.html",
+      "rawHref": "pricing.html",
+      "bucket": "pricing",
+      "label": "Pricing Guide Transparent rates"
+    },
+    {
+      "url": "/quote.html",
+      "rawHref": "quote.html",
+      "bucket": "quote",
+      "label": "Free Estimate"
+    },
+    {
+      "url": "/reviews.html",
+      "rawHref": "reviews.html",
+      "bucket": "reviews",
+      "label": "Reviews 200+ 5-star reviews"
+    },
+    {
+      "url": "/service-areas.html",
+      "rawHref": "service-areas.html",
+      "bucket": "service-areas",
+      "label": "ALL LOCAL GUIDES"
+    },
+    {
+      "url": "/services.html",
+      "rawHref": "services.html",
+      "bucket": "services",
+      "label": "See all services"
+    },
+    {
+      "url": "/services/appliances.html",
+      "rawHref": "services/appliances.html",
+      "bucket": "services",
+      "label": "Appliance Repair Washer, dryer, fridge"
+    },
+    {
+      "url": "/services/bathroom.html",
+      "rawHref": "services/bathroom.html",
+      "bucket": "services",
+      "label": "Bathroom Remodel Showers & vanities"
+    },
+    {
+      "url": "/services/drywall.html",
+      "rawHref": "services/drywall.html",
+      "bucket": "services",
+      "label": "Drywall Repair & texture"
+    },
+    {
+      "url": "/services/flooring.html",
+      "rawHref": "services/flooring.html",
+      "bucket": "services",
+      "label": "Flooring Hardwood, LVP, tile"
+    },
+    {
+      "url": "/services/kitchen.html",
+      "rawHref": "services/kitchen.html",
+      "bucket": "services",
+      "label": "Kitchen Remodel Full renovation"
+    },
+    {
+      "url": "/services/painting.html",
+      "rawHref": "services/painting.html",
+      "bucket": "services",
+      "label": "Painting Interior & exterior"
+    },
+    {
+      "url": "/services/repairs.html",
+      "rawHref": "services/repairs.html",
+      "bucket": "services",
+      "label": "General Repairs Doors, windows, trim"
+    },
+    {
+      "url": "/services/tile.html",
+      "rawHref": "services/tile.html",
+      "bucket": "services",
+      "label": "Tile & Backsplash Any surface"
+    },
+    {
+      "url": "/workpedia/",
+      "rawHref": "workpedia/",
+      "bucket": "workpedia",
+      "label": "Workpedia DFW repair encyclopedia"
+    }
+  ]
+}

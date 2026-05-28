@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /_*
+Disallow: /workpedia/00-system/
+Disallow: /workpedia/01-taxonomy/
+Disallow: /workpedia/02-data/
+Disallow: /workpedia/03-services/
+Disallow: /workpedia/04-locations/
+Disallow: /workpedia/05-guides/
+Disallow: /workpedia/06-copy/
+Disallow: /workpedia/07-page-factory/
+Disallow: /workpedia/08-backlog/
+
+Sitemap: https://elf.repair/sitemap.xml

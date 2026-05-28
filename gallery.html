@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Project Gallery | Real DFW Homes | ELF Home Services</title>
+<meta name="description" content="Real before-and-after photos from completed projects across Dallas-Fort Worth. Kitchens, bathrooms, flooring, painting, and more."/>
+<meta name="keywords" content="ELF Home Services gallery, DFW remodel before after, Dallas kitchen remodel photos, Frisco bathroom remodel"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="author" content="ELF Home Services"/>
+<meta name="geo.region" content="US-TX"/>
+<meta name="geo.placename" content="Dallas-Fort Worth"/>
+<link rel="canonical" href="https://elf.repair/gallery.html"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Cpath d='M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z' fill='%23d4a02a'/%3E%3Cpath d='M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z' fill='%23f0ede6'/%3E%3C/svg%3E"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="ELF Home Services"/>
+<meta property="og:title" content="Project Gallery | Real DFW Homes | ELF Home Services"/>
+<meta property="og:description" content="Real before-and-after photos from completed projects across Dallas-Fort Worth. Kitchens, bathrooms, flooring, painting, and more."/>
+<meta property="og:url" content="https://elf.repair/gallery.html"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Project Gallery | Real DFW Homes | ELF Home Services"/>
+<meta name="twitter:description" content="Real before-and-after photos from completed projects across Dallas-Fort Worth. Kitchens, bathrooms, flooring, painting, and more."/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="styles.css?v=13"/>
+<style>
+/* ===== GALLERY FILTER & ARCHIVE STYLES ===== */
+.gallery-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--s-5);
+  padding: var(--s-5) var(--s-6);
+  background: white;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+.gallery-filter-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  flex: 0 0 auto;
+}
+.gallery-filter-chips {
+  display: flex;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+  flex: 1 1 auto;
+}
+.gallery-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: var(--bone);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.gallery-chip:hover {
+  background: var(--bone-deep);
+}
+.gallery-chip.active {
+  background: var(--ink);
+  color: white;
+  border-color: var(--ink);
+}
+.gallery-chip-count {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  background: rgba(0,0,0,0.06);
+  color: var(--ink-mute);
+  padding: 1px 6px;
+  border-radius: 999px;
+  min-width: 18px;
+  text-align: center;
+}
+.gallery-chip.active .gallery-chip-count {
+  background: rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.85);
+}
+
+/* Archive grid */
+.gallery-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--s-4);
+  margin-top: var(--s-6);
+}
+
+.gallery-archive-card {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.gallery-archive-card:hover {
+  border-color: var(--rust);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.gallery-archive-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--s-4);
+}
+.gallery-archive-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+
+.gallery-archive-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.15;
+  margin: 0 0 var(--s-3);
+  color: var(--ink);
+}
+.gallery-archive-title em {
+  font-style: italic;
+  color: var(--rust);
+}
+
+.gallery-archive-loc {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-bottom: var(--s-3);
+}
+
+.gallery-archive-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0 0 var(--s-5);
+  flex: 1 1 auto;
+}
+
+.gallery-archive-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-2);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line-soft);
+}
+.gallery-archive-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.gallery-archive-meta-item span {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.gallery-archive-meta-item strong {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--ink);
+}
+
+.gallery-archive-empty {
+  text-align: center;
+  padding: var(--s-8) var(--s-5);
+  color: var(--ink-mute);
+  font-size: 15px;
+}
+
+/* Hide projects when filtered */
+.gallery-project.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .gallery-filter-bar { padding: var(--s-4); gap: var(--s-3); }
+  .gallery-filter-label { width: 100%; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://elf.repair/#business",
+  "name": "ELF Home Services",
+  "slogan": "Your home, handled by ELF.",
+  "url": "https://elf.repair/",
+  "telephone": "+1-323-547-5086",
+  "email": "contact@elf.repair",
+  "priceRange": "$$",
+  "description": "Licensed and insured handyman services across Dallas-Fort Worth. Painting, drywall, tile, flooring, kitchen and bathroom remodels, general repairs, and appliance service.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Denton, TX"},
+    {"@type": "City", "name": "Frisco, TX"},
+    {"@type": "City", "name": "Plano, TX"},
+    {"@type": "City", "name": "McKinney, TX"},
+    {"@type": "City", "name": "Allen, TX"},
+    {"@type": "City", "name": "Lewisville, TX"},
+    {"@type": "City", "name": "Flower Mound, TX"},
+    {"@type": "City", "name": "Southlake, TX"},
+    {"@type": "City", "name": "Carrollton, TX"},
+    {"@type": "City", "name": "Prosper, TX"},
+    {"@type": "City", "name": "Dallas, TX"},
+    {"@type": "City", "name": "Fort Worth, TX"}
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "20:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200",
+    "bestRating": "5"
+  },
+  "sameAs": []
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://elf.repair/"},{"@type":"ListItem","position":2,"name":"Gallery","item":"https://elf.repair/gallery.html"}]}</script>
+</head>
+<body>
+
+<div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Denton &amp; North All DFW</span>
+      <span class="topbar-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sun 7AM–8PM</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-item"><span class="topbar-dot"></span>Available Today</span>
+      <a href="tel:+13235475086" class="topbar-phone">(323) 547-5086</a>
+    </div>
+  </div>
+</div>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="ELF Home Services home">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+      </span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">ELF</span>
+        <span class="nav-logo-sub">Home Services</span>
+      </span>
+    </a>
+
+    <div class="nav-menu">
+      <div class="nav-item">
+        <a href="#" class="nav-link">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega">
+  <div class="mega-grid">
+    <a href="services/painting.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Painting</span>
+            <span class="mega-link-desc">Interior & exterior</span>
+          </span>
+        </a><a href="services/drywall.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Drywall</span>
+            <span class="mega-link-desc">Repair & texture</span>
+          </span>
+        </a><a href="services/tile.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Tile & Backsplash</span>
+            <span class="mega-link-desc">Any surface</span>
+          </span>
+        </a><a href="services/flooring.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="3" rx="0.5"/><rect x="3" y="10" width="18" height="3" rx="0.5"/><rect x="3" y="15" width="18" height="3" rx="0.5"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Flooring</span>
+            <span class="mega-link-desc">Hardwood, LVP, tile</span>
+          </span>
+        </a><a href="services/kitchen.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21H7v-5h10v5z"/><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 0 0 4 4 0 0 0 0 0 4 4 0 0 0 8 0 4 4 0 0 0 0 0 4 4 0 0 0 0 0V7a4 4 0 0 0-4-4z"/><path d="M8 11v5M16 11v5M12 11v5"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Kitchen Remodel</span>
+            <span class="mega-link-desc">Full renovation</span>
+          </span>
+        </a><a href="services/bathroom.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M7 4v5M12 9V4M17 4v5M4 14c0 5 4 6 8 6s8-1 8-6H4z"/><circle cx="8" cy="17" r="0.5" fill="currentColor"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/><circle cx="16" cy="17" r="0.5" fill="currentColor"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Bathroom Remodel</span>
+            <span class="mega-link-desc">Showers & vanities</span>
+          </span>
+        </a><a href="services/repairs.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">General Repairs</span>
+            <span class="mega-link-desc">Doors, windows, trim</span>
+          </span>
+        </a><a href="services/appliances.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Appliance Repair</span>
+            <span class="mega-link-desc">Washer, dryer, fridge</span>
+          </span>
+        </a>
+  </div>
+  <div class="mega-footer">
+    <div class="mega-footer-text">All services · <strong>Licensed &amp; insured</strong> · Free estimates</div>
+    <a href="services.html" class="mega-footer-cta">See all services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+</div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link active">Resources <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega">
+  <div class="mega-grid">
+    <a href="hvac.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">HVAC Guide</span>
+            <span class="mega-link-desc">Heating & cooling</span>
+          </span>
+        </a><a href="diy.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">DIY Projects</span>
+            <span class="mega-link-desc">Step-by-step guides</span>
+          </span>
+        </a><a href="maintenance.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Home Maintenance</span>
+            <span class="mega-link-desc">Seasonal checklists</span>
+          </span>
+        </a><a href="pricing.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Pricing Guide</span>
+            <span class="mega-link-desc">Transparent rates</span>
+          </span>
+        </a><a href="faq.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">FAQs</span>
+            <span class="mega-link-desc">Common questions</span>
+          </span>
+        </a><a href="gallery.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Project Gallery</span>
+            <span class="mega-link-desc">Our work</span>
+          </span>
+        </a>
+  </div>
+</div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Company <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega right">
+  <div class="mega-grid">
+    <a href="about.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">About Us</span>
+            <span class="mega-link-desc">Our story</span>
+          </span>
+        </a><a href="reviews.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Reviews</span>
+            <span class="mega-link-desc">200+ 5-star reviews</span>
+          </span>
+        </a><a href="service-areas.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Service Areas</span>
+            <span class="mega-link-desc">15+ DFW cities</span>
+          </span>
+        </a><a href="emergency.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Emergency Service</span>
+            <span class="mega-link-desc">Same-day urgent</span>
+          </span>
+        </a>
+  </div>
+</div>
+      </div>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="quote.html" class="nav-cta">Free Estimate <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+
+    <button class="nav-burger" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-hdr">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <svg width="38" height="38" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+      </span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">ELF</span>
+      </span>
+    </a>
+    <button class="mobile-menu-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Services</div>
+    <a href="services/painting.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg> Painting</a>
+    <a href="services/drywall.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Drywall</a>
+    <a href="services/tile.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg> Tile &amp; Backsplash</a>
+    <a href="services/flooring.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="3" rx="0.5"/><rect x="3" y="10" width="18" height="3" rx="0.5"/><rect x="3" y="15" width="18" height="3" rx="0.5"/></svg> Flooring</a>
+    <a href="services/kitchen.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21H7v-5h10v5z"/><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 0 0 4 4 0 0 0 0 0 4 4 0 0 0 8 0 4 4 0 0 0 0 0 4 4 0 0 0 0 0V7a4 4 0 0 0-4-4z"/><path d="M8 11v5M16 11v5M12 11v5"/></svg> Kitchen Remodel</a>
+    <a href="services/bathroom.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M7 4v5M12 9V4M17 4v5M4 14c0 5 4 6 8 6s8-1 8-6H4z"/><circle cx="8" cy="17" r="0.5" fill="currentColor"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/><circle cx="16" cy="17" r="0.5" fill="currentColor"/></svg> Bathroom Remodel</a>
+    <a href="services/repairs.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> General Repairs</a>
+    <a href="services/appliances.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg> Appliance Repair</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Resources</div>
+    <a href="hvac.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> HVAC Guide</a>
+    <a href="diy.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> DIY Projects</a>
+    <a href="maintenance.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Maintenance</a>
+    <a href="pricing.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Pricing Guide</a>
+    <a href="faq.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQs</a>
+    <a href="gallery.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Gallery</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Company</div>
+    <a href="about.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About Us</a>
+    <a href="reviews.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Reviews</a>
+    <a href="service-areas.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Service Areas</a>
+    <a href="emergency.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Emergency</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <a href="quote.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Get Free Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="tel:+13235475086" class="btn btn-ghost btn-lg" style="width:100%;justify-content:center;margin-top:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (323) 547-5086</a>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Gallery</span></nav>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker" style="margin-bottom:var(--s-5);">Gallery · 20+ projects</div>
+        <h1>Real DFW homes,<br/><em>real transformations.</em></h1>
+        <p class="page-hero-lede">Every project below is from a completed job — no stock photography, no AI renderings, no inflated portfolios. Real customers, real homes, real outcomes across North Texas.</p>
+      </div>
+      <div class="page-hero-meta">
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Featured projects</span><span class="page-hero-meta-value">20+</span></div>
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Total completed</span><span class="page-hero-meta-value">140+</span></div>
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Customer rating</span><span class="page-hero-meta-value">4.9 ★</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILTER BAR ============ -->
+<section style="padding-top:var(--s-7);padding-bottom:0;">
+  <div class="container">
+    <div class="gallery-filter-bar reveal">
+      <div class="gallery-filter-label">Filter by category</div>
+      <div class="gallery-filter-chips">
+        <button class="gallery-chip active" data-filter="all">All <span class="gallery-chip-count">20</span></button>
+        <button class="gallery-chip" data-filter="kitchen">Kitchen <span class="gallery-chip-count">4</span></button>
+        <button class="gallery-chip" data-filter="bathroom">Bathroom <span class="gallery-chip-count">4</span></button>
+        <button class="gallery-chip" data-filter="painting">Painting <span class="gallery-chip-count">3</span></button>
+        <button class="gallery-chip" data-filter="flooring">Flooring <span class="gallery-chip-count">3</span></button>
+        <button class="gallery-chip" data-filter="tile">Tile <span class="gallery-chip-count">2</span></button>
+        <button class="gallery-chip" data-filter="repairs">Repairs <span class="gallery-chip-count">2</span></button>
+        <button class="gallery-chip" data-filter="exterior">Exterior <span class="gallery-chip-count">2</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED BEFORE/AFTER (with photos) ============ -->
+<section style="padding-top:var(--s-6);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-head-left">
+        <div class="kicker">Before & After · Photos</div>
+        <h2 class="sec-head-title">See the <em>transformation.</em></h2>
+      </div>
+      <div class="sec-head-right">
+        <p>Hover or tap any card to reveal the after photo. Each project includes scope, timeline, and city. Want similar work? <a href="quote.html" style="color:var(--rust);text-decoration:underline;">Request an estimate</a>.</p>
+      </div>
+    </div>
+    <div class="grid-3 gallery-projects-grid">
+
+      <article class="ba-card reveal gallery-project" data-cat="kitchen">
+        <div class="ba-imgs">
+          <img src="assets/projects/kitchen-remodel-before-frisco.png" alt="Kitchen Remodel before — Frisco, TX" loading="lazy"/>
+          <img src="assets/projects/kitchen-remodel-after-frisco.png" alt="Kitchen Remodel after — Frisco, TX" class="ba-after" loading="lazy"/>
+          <span class="ba-label">Before</span>
+          <span class="ba-label after-label">After</span>
+        </div>
+        <div class="ba-body" style="flex-direction:column;align-items:flex-start;gap:var(--s-3);">
+          <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+            <div>
+              <div class="ba-title">Kitchen Remodel</div>
+              <div class="ba-loc">Frisco, TX</div>
+            </div>
+            <span class="pill pill-rust">Kitchen</span>
+          </div>
+          <p style="font-size:14px;color:var(--ink-mute);line-height:1.55;">Full custom build — semi-custom cabinets, quartz waterfall island, herringbone backsplash, induction range.</p>
+          <div style="display:flex;justify-content:space-between;width:100%;padding-top:var(--s-3);border-top:1px solid var(--line-soft);">
+            <span class="eyebrow">8 weeks</span>
+            <span class="ba-hint">Hover →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ba-card reveal gallery-project" data-cat="bathroom">
+        <div class="ba-imgs">
+          <img src="assets/projects/bathroom-retile-before-mckinney.png" alt="Bathroom Retile before — McKinney, TX" loading="lazy"/>
+          <img src="assets/projects/bathroom-retile-after-mckinney.png" alt="Bathroom Retile after — McKinney, TX" class="ba-after" loading="lazy"/>
+          <span class="ba-label">Before</span>
+          <span class="ba-label after-label">After</span>
+        </div>
+        <div class="ba-body" style="flex-direction:column;align-items:flex-start;gap:var(--s-3);">
+          <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+            <div>
+              <div class="ba-title">Bathroom Retile</div>
+              <div class="ba-loc">McKinney, TX</div>
+            </div>
+            <span class="pill pill-rust">Bathroom</span>
+          </div>
+          <p style="font-size:14px;color:var(--ink-mute);line-height:1.55;">Master bath remodel — Schluter KERDI shower, niche, epoxy grout, dual vanity.</p>
+          <div style="display:flex;justify-content:space-between;width:100%;padding-top:var(--s-3);border-top:1px solid var(--line-soft);">
+            <span class="eyebrow">3 weeks</span>
+            <span class="ba-hint">Hover →</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="ba-card reveal gallery-project" data-cat="flooring">
+        <div class="ba-imgs">
+          <img src="assets/projects/lvp-flooring-before-arlington.png" alt="LVP Flooring Install before — Arlington, TX" loading="lazy"/>
+          <img src="assets/projects/lvp-flooring-after-arlington.png" alt="LVP Flooring Install after — Arlington, TX" class="ba-after" loading="lazy"/>
+          <span class="ba-label">Before</span>
+          <span class="ba-label after-label">After</span>
+        </div>
+        <div class="ba-body" style="flex-direction:column;align-items:flex-start;gap:var(--s-3);">
+          <div style="display:flex;justify-content:space-between;width:100%;align-items:center;">
+            <div>
+              <div class="ba-title">LVP Flooring Install</div>
+              <div class="ba-loc">Arlington, TX</div>
+            </div>
+            <span class="pill pill-rust">Flooring</span>
+          </div>
+          <p style="font-size:14px;color:var(--ink-mute);line-height:1.55;">2,400 sqft LVP across living, kitchen, hallways. Premium 20-mil wear layer with attached pad.</p>
+          <div style="display:flex;justify-content:space-between;width:100%;padding-top:var(--s-3);border-top:1px solid var(--line-soft);">
+            <span class="eyebrow">5 days</span>
+            <span class="ba-hint">Hover →</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT ARCHIVE (case studies, no photos) ============ -->
+<section style="background:var(--bone);">
+  <div class="container">
+    <div class="sec-head reveal">
+      <div class="sec-head-left">
+        <div class="kicker">Project archive</div>
+        <h2 class="sec-head-title">More <em>completed work.</em></h2>
+      </div>
+      <div class="sec-head-right">
+        <p>A selection of recent projects across North DFW. Photos available on request — many homeowners prefer privacy. Each entry shows real scope, location, timeline, and approximate budget.</p>
+      </div>
+    </div>
+
+    <div class="gallery-archive-grid">
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="kitchen">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Kitchen</span>
+          <span class="gallery-archive-num">№ 04</span>
+        </div>
+        <h3 class="gallery-archive-title">Open-concept kitchen<br/><em>+ island add</em></h3>
+        <div class="gallery-archive-loc">Plano, TX · 75093</div>
+        <p class="gallery-archive-desc">Removed load-bearing wall (with engineered beam), added 9-ft quartz island with seating for four, custom shaker cabinets, brass hardware, pot filler. Pendants over island.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>10 weeks</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$58K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="kitchen">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Kitchen</span>
+          <span class="gallery-archive-num">№ 05</span>
+        </div>
+        <h3 class="gallery-archive-title">Cabinet refinish<br/><em>+ new hardware</em></h3>
+        <div class="gallery-archive-loc">Lewisville, TX · 75067</div>
+        <p class="gallery-archive-desc">Cosmetic kitchen refresh on a budget — sand and spray all 32 cabinet boxes and doors in BM Aura, replace 38 pulls, new pendant lights, fresh subway backsplash. Quartz counters kept.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>8 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$8.5K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="kitchen">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Kitchen</span>
+          <span class="gallery-archive-num">№ 06</span>
+        </div>
+        <h3 class="gallery-archive-title">Galley to L-shape<br/><em>conversion</em></h3>
+        <div class="gallery-archive-loc">Denton, TX · 76210</div>
+        <p class="gallery-archive-desc">Reconfigured tight galley kitchen into open L-shape by removing pantry wall. New stock cabinets in white, butcher-block countertops, single-bowl farmhouse sink, original hardwood refinished.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>5 weeks</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$32K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="bathroom">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Bathroom</span>
+          <span class="gallery-archive-num">№ 07</span>
+        </div>
+        <h3 class="gallery-archive-title">Walk-in shower<br/><em>conversion</em></h3>
+        <div class="gallery-archive-loc">Allen, TX · 75002</div>
+        <p class="gallery-archive-desc">Tub-to-shower conversion for aging-in-place. Curbless walk-in with linear drain, 12x24 large-format porcelain, frameless glass panel, grab bars with proper blocking, comfort-height toilet.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>2.5 weeks</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$14K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="bathroom">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Bathroom</span>
+          <span class="gallery-archive-num">№ 08</span>
+        </div>
+        <h3 class="gallery-archive-title">Hall bath<br/><em>refresh</em></h3>
+        <div class="gallery-archive-loc">Flower Mound, TX · 75028</div>
+        <p class="gallery-archive-desc">Mid-range hall bathroom — new tile floor, vanity with quartz top, modern faucet, fresh paint, vent fan upgrade with humidity sensor. Kept existing tub but replaced surround.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>2 weeks</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$12K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="bathroom">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Bathroom</span>
+          <span class="gallery-archive-num">№ 09</span>
+        </div>
+        <h3 class="gallery-archive-title">Powder room<br/><em>luxury redo</em></h3>
+        <div class="gallery-archive-loc">Southlake, TX · 76092</div>
+        <p class="gallery-archive-desc">High-end powder room — vessel sink on live-edge wood vanity, antique brass plumbing fixtures, custom mirror, hand-painted wallpaper feature wall, sconces, marble floor tile.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>9 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$11K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="painting">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Painting</span>
+          <span class="gallery-archive-num">№ 10</span>
+        </div>
+        <h3 class="gallery-archive-title">Whole-house<br/><em>interior repaint</em></h3>
+        <div class="gallery-archive-loc">Frisco, TX · 75035</div>
+        <p class="gallery-archive-desc">2,650 sqft home — walls, ceilings, all trim and 14 doors. SW Emerald in soft white throughout, accent wall in navy. Furniture protected, surfaces prepped, two coats minimum.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>6 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$11.5K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="painting">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Painting</span>
+          <span class="gallery-archive-num">№ 11</span>
+        </div>
+        <h3 class="gallery-archive-title">Exterior repaint<br/><em>HardiePlank</em></h3>
+        <div class="gallery-archive-loc">Prosper, TX · 75078</div>
+        <p class="gallery-archive-desc">2-story HardiePlank repaint — pressure wash, scrape, prime any bare wood, two coats Sherwin Duration. New caulk on all seams. Garage door, shutters, and front door also refinished.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>4 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$8.8K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="painting">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Painting</span>
+          <span class="gallery-archive-num">№ 12</span>
+        </div>
+        <h3 class="gallery-archive-title">Cabinet spray<br/><em>refinishing</em></h3>
+        <div class="gallery-archive-loc">Carrollton, TX · 75007</div>
+        <p class="gallery-archive-desc">Whole kitchen cabinet refinish — 38 doors and drawer fronts removed, sanded, primed, and sprayed in BM Cloud White. Boxes refinished in place. New brushed brass hardware throughout.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>7 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$5.4K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="flooring">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Flooring</span>
+          <span class="gallery-archive-num">№ 13</span>
+        </div>
+        <h3 class="gallery-archive-title">Engineered hardwood<br/><em>throughout</em></h3>
+        <div class="gallery-archive-loc">Highland Village, TX · 75077</div>
+        <p class="gallery-archive-desc">1,850 sqft engineered hardwood install — wide-plank European white oak, glue-down over slab. Demo of carpet and tile, leveling compound where needed, new transitions and quarter round.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>8 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$22K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="flooring">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Flooring</span>
+          <span class="gallery-archive-num">№ 14</span>
+        </div>
+        <h3 class="gallery-archive-title">Hardwood<br/><em>refinish</em></h3>
+        <div class="gallery-archive-loc">Plano, TX · 75025</div>
+        <p class="gallery-archive-desc">1,200 sqft of original red oak — full sand-and-finish to remove decades of wear. Three coats of water-based finish in satin. Spot-replaced eight damaged boards in high-traffic areas.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>5 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$7.5K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="tile">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Tile</span>
+          <span class="gallery-archive-num">№ 15</span>
+        </div>
+        <h3 class="gallery-archive-title">Herringbone<br/><em>backsplash</em></h3>
+        <div class="gallery-archive-loc">Frisco, TX · 75033</div>
+        <p class="gallery-archive-desc">Marble herringbone backsplash, 32 sqft, full wall behind range with custom inset niche. Existing quartz counter and cabinets preserved. Outlet covers swapped to match accent.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>3 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$2.4K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="tile">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Tile</span>
+          <span class="gallery-archive-num">№ 16</span>
+        </div>
+        <h3 class="gallery-archive-title">Fireplace<br/><em>tile surround</em></h3>
+        <div class="gallery-archive-loc">McKinney, TX · 75070</div>
+        <p class="gallery-archive-desc">Fireplace surround retile — removed dated 90s tile, installed 4x12 zellige-style ceramic in stacked vertical pattern, raw white oak mantel, painted firebox interior matte black.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>4 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$2.1K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="repairs">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Repairs</span>
+          <span class="gallery-archive-num">№ 17</span>
+        </div>
+        <h3 class="gallery-archive-title">Drywall + texture<br/><em>match repair</em></h3>
+        <div class="gallery-archive-loc">The Colony, TX · 75056</div>
+        <p class="gallery-archive-desc">Water damage from upstairs leak — replaced 22 sqft of ceiling drywall, matched knockdown texture seamlessly, primed and painted. Customer couldn't tell where the repair was after.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>2 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$850</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="repairs">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Repairs</span>
+          <span class="gallery-archive-num">№ 18</span>
+        </div>
+        <h3 class="gallery-archive-title">Whole-house<br/><em>punch list</em></h3>
+        <div class="gallery-archive-loc">Little Elm, TX · 75068</div>
+        <p class="gallery-archive-desc">Pre-listing repair list — fix 14 sticking doors, replace 6 light fixtures, repair drywall in 8 locations, regrout master bath, replace toilet wax rings, caulk all wet areas.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>3 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$2.8K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="exterior">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Exterior</span>
+          <span class="gallery-archive-num">№ 19</span>
+        </div>
+        <h3 class="gallery-archive-title">Cedar deck<br/><em>refinish</em></h3>
+        <div class="gallery-archive-loc">Celina, TX · 75009</div>
+        <p class="gallery-archive-desc">450 sqft cedar deck — pressure wash, light sand, replace four damaged boards, two coats of solid stain in dark walnut, all railings refinished. Tightened all loose hardware.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>3 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$2.6K</strong></div>
+        </div>
+      </article>
+
+      <article class="gallery-archive-card reveal gallery-project" data-cat="exterior">
+        <div class="gallery-archive-head">
+          <span class="pill pill-rust">Exterior</span>
+          <span class="gallery-archive-num">№ 20</span>
+        </div>
+        <h3 class="gallery-archive-title">Fence<br/><em>repair + stain</em></h3>
+        <div class="gallery-archive-loc">Denton, TX · 76208</div>
+        <p class="gallery-archive-desc">180 linear ft of cedar fence — replaced 14 rotted pickets and 3 posts, all gates re-hung and adjusted, two coats of semi-transparent stain. Pet-safe finish, dried in 4 hours.</p>
+        <div class="gallery-archive-meta">
+          <div class="gallery-archive-meta-item"><span>Timeline</span><strong>2 days</strong></div>
+          <div class="gallery-archive-meta-item"><span>Budget</span><strong>~$1.6K</strong></div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="gallery-archive-empty" id="galleryEmpty" style="display:none;">
+      <p>No projects in this category yet. <a href="quote.html" style="color:var(--rust);">Ask about a similar project →</a></p>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--paper);">
+  <div class="container">
+    <div class="sec-head-centered reveal">
+      <div class="kicker centered">More work</div>
+      <h2 class="sec-head-title">More photos available <em>by request.</em></h2>
+      <p class="lede" style="margin:var(--s-4) auto 0;">We have hundreds of project photos that aren't published online for client privacy. If you're considering a specific service, ask and we'll share relevant past work.</p>
+    </div>
+    <div style="text-align:center;margin-top:var(--s-6);">
+      <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="btn btn-primary btn-icon-right">Request Project Photos <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="cta-strip">
+  <div class="container">
+    <div class="cta-split">
+      <div>
+        <div class="cta-kicker">Ready when you are</div>
+        <h2 class="cta-title">Let's get your <em>home</em> done right.</h2>
+        <p class="cta-desc">Free estimates · Flat upfront pricing · 1-year labor guarantee · Licensed &amp; insured. Same-day quotes across Denton, Frisco, Plano &amp; all North DFW.</p>
+        <div class="cta-actions">
+          <a href="quote.html" class="cta-btn-primary">Get a Free Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="btn btn-ghost-light"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.5-.6-2.4-1.5-.8-.7-1.3-1.5-1.4-1.8 0-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z" fill="currentColor" stroke="none"/></svg> WhatsApp us</a>
+        </div>
+      </div>
+      <div class="cta-phone">
+        <div class="cta-phone-label">Call or Text</div>
+        <a href="tel:+13235475086" class="cta-phone-num">(323) 547-5086</a>
+        <div class="cta-phone-hours">Mon–Sun · 7 AM – 8 PM · 2-hour response</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <span class="nav-logo-mark" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+          </span>
+          <span class="footer-brand-name">ELF Home Services</span>
+        </div>
+        <p class="footer-brand-desc">DFW's full-service home craftsmen. Licensed &amp; insured. Flat pricing, 1-year labor guarantee on every project.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://g.page/r/TU_GOOGLE_REVIEW_LINK_AQUI" target="_blank" rel="noopener" aria-label="Google Reviews"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/13235475086" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.5-.6-2.4-1.5-.8-.7-1.3-1.5-1.4-1.8 0-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Services</div>
+        <a href="services/painting.html" class="footer-link">Painting</a>
+        <a href="services/drywall.html" class="footer-link">Drywall</a>
+        <a href="services/tile.html" class="footer-link">Tile &amp; Backsplash</a>
+        <a href="services/flooring.html" class="footer-link">Flooring</a>
+        <a href="services/kitchen.html" class="footer-link">Kitchen Remodel</a>
+        <a href="services/bathroom.html" class="footer-link">Bathroom Remodel</a>
+        <a href="services/repairs.html" class="footer-link">General Repairs</a>
+        <a href="services/appliances.html" class="footer-link">Appliance Repair</a>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <a href="hvac.html" class="footer-link">HVAC Guide</a>
+        <a href="diy.html" class="footer-link">DIY Projects</a>
+        <a href="maintenance.html" class="footer-link">Maintenance</a>
+        <a href="pricing.html" class="footer-link">Pricing</a>
+        <a href="faq.html" class="footer-link">FAQs</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+      </div>
+
+      
+      <div>
+        <div class="footer-col-title">Locations</div>
+        <a href="locations/frisco.html" class="footer-link">Frisco</a>
+        <a href="locations/plano.html" class="footer-link">Plano</a>
+        <a href="locations/mckinney.html" class="footer-link">McKinney</a>
+        <a href="locations/denton.html" class="footer-link">Denton</a>
+        <a href="locations/allen.html" class="footer-link">Allen</a>
+        <a href="locations/lewisville.html" class="footer-link">Lewisville</a>
+        <a href="locations/flower-mound.html" class="footer-link">Flower Mound</a>
+        <a href="locations/southlake.html" class="footer-link">Southlake</a>
+        <a href="service-areas.html" class="footer-link">All areas →</a>
+      </div>
+
+<div>
+        <div class="footer-col-title">Company</div>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="reviews.html" class="footer-link">Reviews</a>
+        <a href="service-areas.html" class="footer-link">Service Areas</a>
+        <a href="emergency.html" class="footer-link">Emergency</a>
+        <a href="quote.html" class="footer-link">Free Estimate</a>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+13235475086" class="footer-link">(323) 547-5086</a>
+        <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="footer-link">WhatsApp</a>
+        <p class="footer-link" style="cursor:default;">Mon–Sun 7AM–8PM</p>
+        <p class="footer-link" style="cursor:default;">Denton &amp; North DFW</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 ELF Home Services  ·  Licensed &amp; Insured  ·  Dallas-Fort Worth, TX</div>
+      <div>Built with care in Texas</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.5-.6-2.4-1.5-.8-.7-1.3-1.5-1.4-1.8 0-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z" fill="currentColor" stroke="none"/></svg></a>
+<script src="scripts.js?v=7"></script>
+<script>
+/* ===== GALLERY FILTER LOGIC ===== */
+(function() {
+  'use strict';
+
+  const chips = document.querySelectorAll('.gallery-chip');
+  const projects = document.querySelectorAll('.gallery-project');
+  const empty = document.getElementById('galleryEmpty');
+
+  function applyFilter(filter) {
+    let visible = 0;
+    projects.forEach(p => {
+      const cat = p.dataset.cat;
+      const show = filter === 'all' || cat === filter;
+      p.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+    if (empty) empty.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      chips.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      applyFilter(chip.dataset.filter);
+    });
+  });
+})();
+</script>
+<script src="site-enhancements.js?v=4"></script>
+</body>
+</html>

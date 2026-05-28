@@ -1,0 +1,46 @@
+{
+  "name": "ELF Workpedia",
+  "version": "0.1.0",
+  "created": "2026-05-28",
+  "owner": "ELF Home Services",
+  "purpose": "Public encyclopedia entrypoint and private data engine for home-service content, local SEO pages, guide pages, FAQs, calculators, and interactive planning modules.",
+  "public": true,
+  "public_entrypoint": "https://elf.repair/workpedia/",
+  "private_data_paths": [
+    "/workpedia/00-system/",
+    "/workpedia/01-taxonomy/",
+    "/workpedia/02-data/",
+    "/workpedia/03-services/",
+    "/workpedia/04-locations/",
+    "/workpedia/05-guides/",
+    "/workpedia/06-copy/",
+    "/workpedia/07-page-factory/",
+    "/workpedia/08-backlog/"
+  ],
+  "canonical_domain": "https://elf.repair",
+  "content_principles": [
+    "Useful before persuasive",
+    "Local before generic",
+    "Specific before vague",
+    "Practical before decorative",
+    "Decision support before keyword stuffing"
+  ],
+  "primary_buckets": [
+    "services",
+    "locations",
+    "guides",
+    "costs",
+    "materials",
+    "problems",
+    "maintenance",
+    "copy_blocks",
+    "page_factory"
+  ],
+  "volume_status": {
+    "volume_01_foundation": "started",
+    "volume_02_cost_data": "planned",
+    "volume_03_local_expansion": "planned",
+    "volume_04_diy_library": "planned",
+    "volume_05_faq_schema_snippets": "planned"
+  }
+}

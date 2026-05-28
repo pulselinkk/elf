@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Book Online · Schedule a Visit | ELF Home Services DFW</title>
+<meta name="description" content="Book your handyman visit online in 60 seconds. Pick a service, choose a day & time, and we confirm by text within an hour. Serving all of DFW — Frisco, Plano, McKinney, Denton."/>
+<meta name="keywords" content="book handyman Dallas online, schedule handyman DFW, handyman appointment Frisco, online booking Plano contractor"/>
+<meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="author" content="ELF Home Services"/>
+<meta name="geo.region" content="US-TX"/>
+<meta name="geo.placename" content="Dallas-Fort Worth"/>
+<link rel="canonical" href="https://elf.repair/book.html"/>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23141414'/%3E%3Cpath d='M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z' fill='%23d4a02a'/%3E%3Cpath d='M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z' fill='%23f0ede6'/%3E%3C/svg%3E"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="ELF Home Services"/>
+<meta property="og:title" content="Book Online · Schedule a Visit | ELF Home Services DFW"/>
+<meta property="og:description" content="Book your handyman visit online in 60 seconds. Pick a service, choose a day & time, and we confirm by text within an hour."/>
+<meta property="og:url" content="https://elf.repair/book.html"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Book Online · Schedule a Visit | ELF Home Services DFW"/>
+<meta name="twitter:description" content="Book your handyman visit online in 60 seconds. Pick a service, choose a day & time, and we confirm by text within an hour."/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="styles.css"/>
+<style>
+/* ===== BOOKING WIDGET STYLES ===== */
+.booking-progress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  margin-bottom: var(--s-7);
+  flex-wrap: wrap;
+}
+.booking-step-pill {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 10px 16px;
+  background: var(--bone);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  transition: all 0.2s;
+}
+.booking-step-pill.active {
+  background: var(--ink);
+  border-color: var(--ink);
+}
+.booking-step-pill.complete {
+  background: var(--rust-pale);
+  border-color: var(--rust);
+}
+.booking-step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.08);
+  color: var(--ink-mute);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+}
+.booking-step-pill.active .booking-step-num {
+  background: var(--rust);
+  color: white;
+}
+.booking-step-pill.complete .booking-step-num {
+  background: var(--rust);
+  color: white;
+}
+.booking-step-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+}
+.booking-step-pill.active .booking-step-label {
+  color: white;
+}
+.booking-step-pill.complete .booking-step-label {
+  color: var(--rust-deep);
+}
+.booking-step-divider {
+  width: 24px;
+  height: 1px;
+  background: var(--line);
+}
+
+.booking-panel {
+  display: none;
+  animation: bookingFadeIn 0.3s ease;
+}
+.booking-panel.active {
+  display: block;
+}
+@keyframes bookingFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.booking-panel-head {
+  text-align: center;
+  margin-bottom: var(--s-7);
+}
+.booking-panel-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: var(--s-3) 0 var(--s-3);
+  color: var(--ink);
+}
+.booking-panel-title em {
+  font-style: italic;
+  color: var(--rust);
+}
+.booking-panel-sub {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--ink-mute);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.55;
+}
+
+/* Service grid */
+.booking-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--s-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.booking-service-card {
+  background: white;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  padding: var(--s-5);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+.booking-service-card:hover {
+  border-color: var(--rust);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.booking-service-card.selected {
+  border-color: var(--rust);
+  background: var(--rust-pale);
+  box-shadow: var(--shadow-rust);
+}
+.booking-service-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--rust-pale);
+  color: var(--rust);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--s-3);
+}
+.booking-service-title {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.booking-service-desc {
+  font-size: 13px;
+  color: var(--ink-mute);
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Date & time */
+.booking-section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-bottom: var(--s-4);
+}
+.booking-dates-row {
+  display: flex;
+  gap: var(--s-3);
+  overflow-x: auto;
+  padding-bottom: var(--s-3);
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+.booking-date-card {
+  flex: 0 0 auto;
+  min-width: 84px;
+  background: white;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  padding: var(--s-4) var(--s-3);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+.booking-date-card:hover {
+  border-color: var(--ink-mute);
+  transform: translateY(-1px);
+}
+.booking-date-card.selected {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}
+.booking-date-card.selected .booking-date-day {
+  color: var(--rust-soft);
+}
+.booking-date-weekday {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  display: block;
+  margin-bottom: 4px;
+}
+.booking-date-card.selected .booking-date-weekday {
+  color: rgba(255,255,255,0.65);
+}
+.booking-date-day {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+  margin-bottom: 2px;
+}
+.booking-date-month {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-mute);
+  display: block;
+}
+.booking-date-card.selected .booking-date-month {
+  color: rgba(255,255,255,0.6);
+}
+.booking-date-card.today::after {
+  content: 'TODAY';
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--rust);
+  margin-top: 4px;
+}
+.booking-date-card.selected.today::after {
+  color: var(--rust-soft);
+}
+
+.booking-times-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--s-3);
+  max-width: 880px;
+}
+.booking-time-card {
+  background: white;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-width: 0;
+}
+.booking-time-card:hover {
+  border-color: var(--ink-mute);
+}
+.booking-time-card.selected {
+  border-color: var(--rust);
+  background: var(--rust-pale);
+}
+.booking-time-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bone);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40px;
+}
+.booking-time-card.selected .booking-time-icon {
+  background: var(--rust);
+  color: white;
+}
+.booking-time-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.booking-time-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 2px;
+  color: var(--ink);
+}
+.booking-time-window {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-mute);
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Radio row */
+.booking-radio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}
+.booking-radio {
+  position: relative;
+  cursor: pointer;
+}
+.booking-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.booking-radio span {
+  display: inline-block;
+  padding: 9px 16px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: all 0.15s;
+}
+.booking-radio:hover span {
+  border-color: var(--ink-mute);
+}
+.booking-radio input:checked + span {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: white;
+}
+
+/* Summary */
+.booking-summary {
+  background: white;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+}
+.booking-summary-row {
+  display: flex;
+  padding: var(--s-4) var(--s-5);
+  border-bottom: 1px solid var(--line-soft);
+  gap: var(--s-4);
+  flex-wrap: wrap;
+}
+.booking-summary-row:last-child {
+  border-bottom: none;
+}
+.booking-summary-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  flex: 0 0 140px;
+  padding-top: 2px;
+}
+.booking-summary-value {
+  flex: 1 1 auto;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.booking-summary-value strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.booking-success-callout {
+  display: flex;
+  gap: var(--s-3);
+  padding: var(--s-4);
+  background: var(--rust-pale);
+  border: 1px solid var(--rust-soft);
+  border-radius: var(--r-md);
+}
+.booking-success-icon {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--rust);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.booking-success-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 4px;
+  color: var(--rust-deep);
+}
+.booking-success-text {
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+/* Nav buttons */
+.booking-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line-soft);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .booking-step-label { display: none; }
+  .booking-step-divider { width: 12px; }
+  .booking-summary-label { flex: 0 0 100%; }
+  .booking-nav { flex-direction: column; align-items: stretch; }
+  .booking-nav .btn { width: 100%; justify-content: center; }
+}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "@id": "https://elf.repair/#business",
+  "name": "ELF Home Services",
+  "slogan": "Your home, handled by ELF.",
+  "url": "https://elf.repair/",
+  "telephone": "+1-323-547-5086",
+  "email": "contact@elf.repair",
+  "priceRange": "$$",
+  "description": "Licensed and insured handyman services across Dallas-Fort Worth. Painting, drywall, tile, flooring, kitchen and bathroom remodels, general repairs, and appliance service.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Denton",
+    "addressRegion": "TX",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Denton, TX"},
+    {"@type": "City", "name": "Frisco, TX"},
+    {"@type": "City", "name": "Plano, TX"},
+    {"@type": "City", "name": "McKinney, TX"},
+    {"@type": "City", "name": "Allen, TX"},
+    {"@type": "City", "name": "Lewisville, TX"},
+    {"@type": "City", "name": "Flower Mound, TX"},
+    {"@type": "City", "name": "Southlake, TX"},
+    {"@type": "City", "name": "Carrollton, TX"},
+    {"@type": "City", "name": "Prosper, TX"},
+    {"@type": "City", "name": "Dallas, TX"},
+    {"@type": "City", "name": "Fort Worth, TX"}
+  ],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "07:00",
+    "closes": "20:00"
+  }],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "200",
+    "bestRating": "5"
+  },
+  "sameAs": []
+}
+</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://elf.repair/"},{"@type":"ListItem","position":2,"name":"Get a Quote","item":"https://elf.repair/quote.html"}]}</script>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="topbar-left">
+      <span class="topbar-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Serving Denton &amp; North All DFW</span>
+      <span class="topbar-item"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Mon–Sun 7AM–8PM</span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-item"><span class="topbar-dot"></span>Available Today</span>
+      <a href="tel:+13235475086" class="topbar-phone">(323) 547-5086</a>
+    </div>
+  </div>
+</div>
+
+<nav class="nav" role="navigation" aria-label="Main">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="ELF Home Services home">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+      </span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">ELF</span>
+        <span class="nav-logo-sub">Home Services</span>
+      </span>
+    </a>
+
+    <div class="nav-menu">
+      <div class="nav-item">
+        <a href="#" class="nav-link">Services <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega">
+  <div class="mega-grid">
+    <a href="services/painting.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Painting</span>
+            <span class="mega-link-desc">Interior & exterior</span>
+          </span>
+        </a><a href="services/drywall.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Drywall</span>
+            <span class="mega-link-desc">Repair & texture</span>
+          </span>
+        </a><a href="services/tile.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Tile & Backsplash</span>
+            <span class="mega-link-desc">Any surface</span>
+          </span>
+        </a><a href="services/flooring.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="3" rx="0.5"/><rect x="3" y="10" width="18" height="3" rx="0.5"/><rect x="3" y="15" width="18" height="3" rx="0.5"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Flooring</span>
+            <span class="mega-link-desc">Hardwood, LVP, tile</span>
+          </span>
+        </a><a href="services/kitchen.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21H7v-5h10v5z"/><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 0 0 4 4 0 0 0 0 0 4 4 0 0 0 8 0 4 4 0 0 0 0 0 4 4 0 0 0 0 0V7a4 4 0 0 0-4-4z"/><path d="M8 11v5M16 11v5M12 11v5"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Kitchen Remodel</span>
+            <span class="mega-link-desc">Full renovation</span>
+          </span>
+        </a><a href="services/bathroom.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M7 4v5M12 9V4M17 4v5M4 14c0 5 4 6 8 6s8-1 8-6H4z"/><circle cx="8" cy="17" r="0.5" fill="currentColor"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/><circle cx="16" cy="17" r="0.5" fill="currentColor"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Bathroom Remodel</span>
+            <span class="mega-link-desc">Showers & vanities</span>
+          </span>
+        </a><a href="services/repairs.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">General Repairs</span>
+            <span class="mega-link-desc">Doors, windows, trim</span>
+          </span>
+        </a><a href="services/appliances.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Appliance Repair</span>
+            <span class="mega-link-desc">Washer, dryer, fridge</span>
+          </span>
+        </a>
+  </div>
+  <div class="mega-footer">
+    <div class="mega-footer-text">All services · <strong>Licensed &amp; insured</strong> · Free estimates</div>
+    <a href="services.html" class="mega-footer-cta">See all services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+  </div>
+</div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Resources <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega">
+  <div class="mega-grid">
+    <a href="hvac.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">HVAC Guide</span>
+            <span class="mega-link-desc">Heating & cooling</span>
+          </span>
+        </a><a href="diy.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">DIY Projects</span>
+            <span class="mega-link-desc">Step-by-step guides</span>
+          </span>
+        </a><a href="maintenance.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Home Maintenance</span>
+            <span class="mega-link-desc">Seasonal checklists</span>
+          </span>
+        </a><a href="pricing.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Pricing Guide</span>
+            <span class="mega-link-desc">Transparent rates</span>
+          </span>
+        </a><a href="faq.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">FAQs</span>
+            <span class="mega-link-desc">Common questions</span>
+          </span>
+        </a><a href="gallery.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Project Gallery</span>
+            <span class="mega-link-desc">Our work</span>
+          </span>
+        </a>
+  </div>
+</div>
+      </div>
+      <div class="nav-item">
+        <a href="#" class="nav-link">Company <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chev"><polyline points="6 9 12 15 18 9"/></svg></a>
+        
+<div class="mega right">
+  <div class="mega-grid">
+    <a href="about.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">About Us</span>
+            <span class="mega-link-desc">Our story</span>
+          </span>
+        </a><a href="reviews.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Reviews</span>
+            <span class="mega-link-desc">200+ 5-star reviews</span>
+          </span>
+        </a><a href="service-areas.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Service Areas</span>
+            <span class="mega-link-desc">15+ DFW cities</span>
+          </span>
+        </a><a href="emergency.html" class="mega-link">
+          <span class="mega-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span>
+          <span class="mega-link-text">
+            <span class="mega-link-title">Emergency Service</span>
+            <span class="mega-link-desc">Same-day urgent</span>
+          </span>
+        </a>
+  </div>
+</div>
+      </div>
+      <a href="pricing.html" class="nav-link">Pricing</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="quote.html" class="nav-cta">Free Estimate <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+
+    <button class="nav-burger" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" aria-hidden="true">
+  <div class="mobile-menu-hdr">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <svg width="38" height="38" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+      </span>
+      <span class="nav-logo-text">
+        <span class="nav-logo-name">ELF</span>
+      </span>
+    </a>
+    <button class="mobile-menu-close" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Services</div>
+    <a href="services/painting.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg> Painting</a>
+    <a href="services/drywall.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> Drywall</a>
+    <a href="services/tile.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg> Tile &amp; Backsplash</a>
+    <a href="services/flooring.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="3" rx="0.5"/><rect x="3" y="10" width="18" height="3" rx="0.5"/><rect x="3" y="15" width="18" height="3" rx="0.5"/></svg> Flooring</a>
+    <a href="services/kitchen.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21H7v-5h10v5z"/><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 0 0 4 4 0 0 0 0 0 4 4 0 0 0 8 0 4 4 0 0 0 0 0 4 4 0 0 0 0 0V7a4 4 0 0 0-4-4z"/><path d="M8 11v5M16 11v5M12 11v5"/></svg> Kitchen Remodel</a>
+    <a href="services/bathroom.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M7 4v5M12 9V4M17 4v5M4 14c0 5 4 6 8 6s8-1 8-6H4z"/><circle cx="8" cy="17" r="0.5" fill="currentColor"/><circle cx="12" cy="18" r="0.5" fill="currentColor"/><circle cx="16" cy="17" r="0.5" fill="currentColor"/></svg> Bathroom Remodel</a>
+    <a href="services/repairs.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> General Repairs</a>
+    <a href="services/appliances.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg> Appliance Repair</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Resources</div>
+    <a href="hvac.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg> HVAC Guide</a>
+    <a href="diy.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg> DIY Projects</a>
+    <a href="maintenance.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Maintenance</a>
+    <a href="pricing.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Pricing Guide</a>
+    <a href="faq.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> FAQs</a>
+    <a href="gallery.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Gallery</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <div class="mobile-menu-label">Company</div>
+    <a href="about.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> About Us</a>
+    <a href="reviews.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> Reviews</a>
+    <a href="service-areas.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Service Areas</a>
+    <a href="emergency.html" class="mobile-menu-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg> Emergency</a>
+  </div>
+
+  <div class="mobile-menu-group">
+    <a href="quote.html" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">Get Free Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    <a href="tel:+13235475086" class="btn btn-ghost btn-lg" style="width:100%;justify-content:center;margin-top:12px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> (323) 547-5086</a>
+  </div>
+</div>
+
+<div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span class="current">Book Online</span></nav>
+</div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <div class="kicker" style="margin-bottom:var(--s-5);">Book Online · 60 seconds</div>
+        <h1>Schedule a visit<br/>at <em>your convenience.</em></h1>
+        <p class="page-hero-lede">Pick the service, choose a day and time, and we'll confirm by text within an hour. Same-day slots usually available. Free, no obligation, never any pressure.</p>
+      </div>
+      <div class="page-hero-meta">
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Confirmation</span><span class="page-hero-meta-value">&lt; 1 hour</span></div>
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Same-day</span><span class="page-hero-meta-value">Often available</span></div>
+        <div class="page-hero-meta-item"><span class="page-hero-meta-label">Visit fee</span><span class="page-hero-meta-value">Free</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BOOKING WIDGET ===== -->
+<section style="padding-top:var(--s-7);">
+  <div class="container">
+
+    <!-- Progress steps -->
+    <div class="booking-progress reveal" id="bookingProgress">
+      <div class="booking-step-pill active" data-step="1">
+        <span class="booking-step-num">1</span>
+        <span class="booking-step-label">Service</span>
+      </div>
+      <div class="booking-step-divider"></div>
+      <div class="booking-step-pill" data-step="2">
+        <span class="booking-step-num">2</span>
+        <span class="booking-step-label">Date & time</span>
+      </div>
+      <div class="booking-step-divider"></div>
+      <div class="booking-step-pill" data-step="3">
+        <span class="booking-step-num">3</span>
+        <span class="booking-step-label">Your info</span>
+      </div>
+      <div class="booking-step-divider"></div>
+      <div class="booking-step-pill" data-step="4">
+        <span class="booking-step-num">4</span>
+        <span class="booking-step-label">Confirm</span>
+      </div>
+    </div>
+
+    <!-- Step 1: Service -->
+    <div class="booking-panel active" id="bookingStep1">
+      <div class="booking-panel-head">
+        <div class="kicker">Step 1 of 4</div>
+        <h2 class="booking-panel-title">What service do you <em>need?</em></h2>
+        <p class="booking-panel-sub">Pick whichever fits closest. We'll discuss the details on the call.</p>
+      </div>
+
+      <div class="booking-services-grid">
+        <button type="button" class="booking-service-card" data-service="painting">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.06 11.9l8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08"/><path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z"/></svg></div>
+          <h3 class="booking-service-title">Painting</h3>
+          <p class="booking-service-desc">Interior, exterior, cabinets</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="drywall">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+          <h3 class="booking-service-title">Drywall</h3>
+          <p class="booking-service-desc">Repair, patch, texture</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="tile">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
+          <h3 class="booking-service-title">Tile & Backsplash</h3>
+          <p class="booking-service-desc">Kitchen, bath, floors</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="flooring">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="3" rx="0.5"/><rect x="3" y="10" width="18" height="3" rx="0.5"/><rect x="3" y="15" width="18" height="3" rx="0.5"/></svg></div>
+          <h3 class="booking-service-title">Flooring</h3>
+          <p class="booking-service-desc">Hardwood, LVP, tile</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="kitchen">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21H7v-5h10v5z"/><path d="M12 3a4 4 0 0 0-4 4v4a4 4 0 0 0 8 0V7a4 4 0 0 0-4-4z"/></svg></div>
+          <h3 class="booking-service-title">Kitchen Remodel</h3>
+          <p class="booking-service-desc">Cabinets, counters, full</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="bathroom">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16M7 4v5M12 9V4M17 4v5M4 14c0 5 4 6 8 6s8-1 8-6H4z"/></svg></div>
+          <h3 class="booking-service-title">Bathroom Remodel</h3>
+          <p class="booking-service-desc">Showers, vanities, tile</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="repairs">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+          <h3 class="booking-service-title">General Repairs</h3>
+          <p class="booking-service-desc">Doors, windows, fixtures</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="appliances">
+          <div class="booking-service-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="12" cy="13" r="2"/><line x1="7" y1="6" x2="7.01" y2="6"/></svg></div>
+          <h3 class="booking-service-title">Appliance Repair</h3>
+          <p class="booking-service-desc">Washer, dryer, fridge</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="emergency">
+          <div class="booking-service-icon" style="background:#ffe6e0;color:#c8341a;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <h3 class="booking-service-title">Emergency</h3>
+          <p class="booking-service-desc">Same-day urgent fix</p>
+        </button>
+
+        <button type="button" class="booking-service-card" data-service="other">
+          <div class="booking-service-icon" style="background:var(--bone-deep);color:var(--ink);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+          <h3 class="booking-service-title">Other / Multiple</h3>
+          <p class="booking-service-desc">Tell us in the next steps</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Date & time -->
+    <div class="booking-panel" id="bookingStep2">
+      <div class="booking-panel-head">
+        <div class="kicker">Step 2 of 4</div>
+        <h2 class="booking-panel-title">When works <em>best for you?</em></h2>
+        <p class="booking-panel-sub">Pick a day and time window. We'll confirm by text or call within an hour. Times shown are in Central Time (DFW).</p>
+      </div>
+
+      <div class="booking-date-section">
+        <div class="booking-section-label">Available dates</div>
+        <div class="booking-dates-row" id="bookingDatesRow">
+          <!-- Generated by JS -->
+        </div>
+
+        <div class="booking-section-label" style="margin-top:var(--s-7);">Time window</div>
+        <div class="booking-times-grid">
+          <button type="button" class="booking-time-card" data-time="morning">
+            <div class="booking-time-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/></svg></div>
+            <div class="booking-time-text">
+              <h4 class="booking-time-title">Morning</h4>
+              <p class="booking-time-window">8:00 — 11:00 AM</p>
+            </div>
+          </button>
+          <button type="button" class="booking-time-card" data-time="midday">
+            <div class="booking-time-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/></svg></div>
+            <div class="booking-time-text">
+              <h4 class="booking-time-title">Midday</h4>
+              <p class="booking-time-window">11:00 AM — 2:00 PM</p>
+            </div>
+          </button>
+          <button type="button" class="booking-time-card" data-time="afternoon">
+            <div class="booking-time-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+            <div class="booking-time-text">
+              <h4 class="booking-time-title">Afternoon</h4>
+              <p class="booking-time-window">2:00 — 5:00 PM</p>
+            </div>
+          </button>
+          <button type="button" class="booking-time-card" data-time="evening">
+            <div class="booking-time-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+            <div class="booking-time-text">
+              <h4 class="booking-time-title">Evening</h4>
+              <p class="booking-time-window">5:00 — 7:00 PM</p>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <div class="booking-nav">
+        <button type="button" class="btn btn-ghost btn-lg" data-action="back">← Back</button>
+        <button type="button" class="btn btn-primary btn-lg btn-icon-right" data-action="next" id="bookingStep2Next" disabled>Continue <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Step 3: Your info -->
+    <div class="booking-panel" id="bookingStep3">
+      <div class="booking-panel-head">
+        <div class="kicker">Step 3 of 4</div>
+        <h2 class="booking-panel-title">A few <em>quick details.</em></h2>
+        <p class="booking-panel-sub">So we can confirm your appointment and find your address.</p>
+      </div>
+
+      <form id="bookingForm" autocomplete="on" novalidate>
+        <div class="grid-2">
+          <div class="form-field">
+            <label class="form-label" for="b-name">Full name <span style="color:var(--rust);">*</span></label>
+            <input class="form-input" type="text" id="b-name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="b-phone">Phone <span style="color:var(--rust);">*</span></label>
+            <input class="form-input" type="tel" id="b-phone" name="phone" required autocomplete="tel" placeholder="(214) 555-0100">
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="form-field">
+            <label class="form-label" for="b-email">Email</label>
+            <input class="form-input" type="email" id="b-email" name="email" autocomplete="email">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="b-city">City <span style="color:var(--rust);">*</span></label>
+            <select class="form-select" id="b-city" name="city" required>
+              <option value="">Select your city</option>
+              <option value="Denton">Denton, TX</option>
+              <option value="Frisco">Frisco, TX</option>
+              <option value="Plano">Plano, TX</option>
+              <option value="McKinney">McKinney, TX</option>
+              <option value="Allen">Allen, TX</option>
+              <option value="Lewisville">Lewisville, TX</option>
+              <option value="Flower Mound">Flower Mound, TX</option>
+              <option value="Southlake">Southlake, TX</option>
+              <option value="Highland Village">Highland Village, TX</option>
+              <option value="Carrollton">Carrollton, TX</option>
+              <option value="Little Elm">Little Elm, TX</option>
+              <option value="The Colony">The Colony, TX</option>
+              <option value="Prosper">Prosper, TX</option>
+              <option value="Celina">Celina, TX</option>
+              <option value="Dallas">Dallas, TX</option>
+              <option value="Fort Worth">Fort Worth, TX</option>
+              <option value="other">Other (specify in details)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="b-address">Street address <span style="color:var(--ink-mute);font-weight:400;">(helps us plan the visit)</span></label>
+          <input class="form-input" type="text" id="b-address" name="address" autocomplete="street-address" placeholder="123 Main St">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="b-details">Project details <span style="color:var(--ink-mute);font-weight:400;">(optional, helps us prepare)</span></label>
+          <textarea class="form-textarea" id="b-details" name="details" placeholder="Anything that would help — size, current condition, materials you've considered, photos coming separately, etc."></textarea>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="b-contact-pref">Best way to reach you</label>
+          <div class="booking-radio-row">
+            <label class="booking-radio">
+              <input type="radio" name="contactPref" value="text" checked>
+              <span>Text</span>
+            </label>
+            <label class="booking-radio">
+              <input type="radio" name="contactPref" value="call">
+              <span>Call</span>
+            </label>
+            <label class="booking-radio">
+              <input type="radio" name="contactPref" value="whatsapp">
+              <span>WhatsApp</span>
+            </label>
+            <label class="booking-radio">
+              <input type="radio" name="contactPref" value="email">
+              <span>Email</span>
+            </label>
+          </div>
+        </div>
+      </form>
+
+      <div class="booking-nav">
+        <button type="button" class="btn btn-ghost btn-lg" data-action="back">← Back</button>
+        <button type="button" class="btn btn-primary btn-lg btn-icon-right" data-action="next">Review <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+      </div>
+    </div>
+
+    <!-- Step 4: Confirm -->
+    <div class="booking-panel" id="bookingStep4">
+      <div class="booking-panel-head">
+        <div class="kicker">Step 4 of 4</div>
+        <h2 class="booking-panel-title">Quick <em>review.</em></h2>
+        <p class="booking-panel-sub">Looks right? Hit submit and We'll reach out within an hour to confirm.</p>
+      </div>
+
+      <div class="booking-summary" id="bookingSummary">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="booking-success-callout" style="margin-top:var(--s-6);">
+        <div class="booking-success-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <div>
+          <div class="booking-success-title">What happens next</div>
+          <div class="booking-success-text">When you submit, your default email opens with all the info pre-filled, addressed to our team. Just hit "Send" in your mail app. Or you can submit via WhatsApp instead — both work.</div>
+        </div>
+      </div>
+
+      <div class="booking-nav">
+        <button type="button" class="btn btn-ghost btn-lg" data-action="back">← Back</button>
+        <div style="display:flex;gap:var(--s-3);flex-wrap:wrap;">
+          <button type="button" class="btn btn-ghost btn-lg" id="bookingSubmitWhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5z"/></svg> Send via WhatsApp</button>
+          <button type="button" class="btn btn-primary btn-lg btn-icon-right" id="bookingSubmitEmail">Submit Booking <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section style="background:var(--bone);">
+  <div class="container">
+    <div class="sec-head-centered reveal">
+      <div class="kicker centered">What happens after</div>
+      <h2 class="sec-head-title">From booking to <em>job done.</em></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Confirmation</h3>
+        <p class="step-desc">Within an hour, you'll get a text or call from us confirming the slot or proposing the closest alternative.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3 class="step-title">On-site visit</h3>
+        <p class="step-desc">Our craftsman shows up in the agreed window. Inspects the work, asks questions, talks through options. 30–60 min typical.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Written quote</h3>
+        <p class="step-desc">Same day or next morning. Flat price, in writing, no obligation, no high-pressure follow-up.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Work begins</h3>
+        <p class="step-desc">If you approve, we schedule the job. Most small projects start within 3–5 days. Larger remodels 1–3 weeks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ALTERNATIVE CONTACT ===== -->
+<section>
+  <div class="container">
+    <div class="sec-head-centered reveal">
+      <div class="kicker centered">Prefer another way?</div>
+      <h2 class="sec-head-title">Three other ways to <em>reach us.</em></h2>
+    </div>
+    <div class="grid-3 reveal" style="margin-top:var(--s-7);">
+      <a href="tel:+13235475086" class="card" style="text-align:center;text-decoration:none;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--rust-pale);color:var(--rust);display:flex;align-items:center;justify-content:center;margin:0 auto var(--s-4);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.24h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <h3 class="display-3" style="margin-bottom:var(--s-3);">Call</h3>
+        <p style="color:var(--ink-mute);font-size:14px;line-height:1.55;">Fastest response. Real human. We answer most calls personally.</p>
+        <div style="font-family:var(--font-display);font-size:24px;font-weight:500;color:var(--ink);margin-top:var(--s-4);letter-spacing:-0.015em;">(323) 547-5086</div>
+      </a>
+
+      <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="card" style="text-align:center;text-decoration:none;">
+        <div style="width:64px;height:64px;border-radius:50%;background:#dcf8e0;color:#25d366;display:flex;align-items:center;justify-content:center;margin:0 auto var(--s-4);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5z" fill="currentColor" stroke="none"/></svg></div>
+        <h3 class="display-3" style="margin-bottom:var(--s-3);">WhatsApp</h3>
+        <p style="color:var(--ink-mute);font-size:14px;line-height:1.55;">Best for sharing photos and quick details. Threaded for easy reference.</p>
+        <div style="font-family:var(--font-mono);font-size:13px;color:var(--rust);margin-top:var(--s-4);letter-spacing:0.05em;text-transform:uppercase;font-weight:600;">Open WhatsApp →</div>
+      </a>
+
+      <a href="quote.html" class="card" style="text-align:center;text-decoration:none;">
+        <div style="width:64px;height:64px;border-radius:50%;background:var(--bone-deep);color:var(--ink);display:flex;align-items:center;justify-content:center;margin:0 auto var(--s-4);"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg></div>
+        <h3 class="display-3" style="margin-bottom:var(--s-3);">Detailed quote</h3>
+        <p style="color:var(--ink-mute);font-size:14px;line-height:1.55;">Got a complex project? Use the long-form estimate request page instead.</p>
+        <div style="font-family:var(--font-mono);font-size:13px;color:var(--rust);margin-top:var(--s-4);letter-spacing:0.05em;text-transform:uppercase;font-weight:600;">Open form →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-logo">
+          <span class="nav-logo-mark" aria-hidden="true">
+            <svg width="44" height="44" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="10" fill="#141414"/>
+          <path d="M 20 44 Q 22 18 44 11 Q 38 30 47 38 Q 35 40 32 44 Z" fill="#d4a02a"/>
+          <path d="M 14 46 L 32 32 L 50 46 L 44 46 L 32 36 L 20 46 Z" fill="#f0ede6"/>
+          <rect x="28" y="40" width="8" height="8" fill="#d4a02a"/>
+        </svg>
+          </span>
+          <span class="footer-brand-name">ELF Home Services</span>
+        </div>
+        <p class="footer-brand-desc">DFW's full-service home craftsmen. Licensed &amp; insured. Flat pricing, 1-year labor guarantee on every project.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://g.page/r/TU_GOOGLE_REVIEW_LINK_AQUI" target="_blank" rel="noopener" aria-label="Google Reviews"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12c0-4.1 3.2-7.27 7.2-7.27 3.09 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.1 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.22 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.15-1.81-.15-1.81z" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://wa.me/13235475086" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.5-.6-2.4-1.5-.8-.7-1.3-1.5-1.4-1.8 0-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Services</div>
+        <a href="services/painting.html" class="footer-link">Painting</a>
+        <a href="services/drywall.html" class="footer-link">Drywall</a>
+        <a href="services/tile.html" class="footer-link">Tile &amp; Backsplash</a>
+        <a href="services/flooring.html" class="footer-link">Flooring</a>
+        <a href="services/kitchen.html" class="footer-link">Kitchen Remodel</a>
+        <a href="services/bathroom.html" class="footer-link">Bathroom Remodel</a>
+        <a href="services/repairs.html" class="footer-link">General Repairs</a>
+        <a href="services/appliances.html" class="footer-link">Appliance Repair</a>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <a href="hvac.html" class="footer-link">HVAC Guide</a>
+        <a href="diy.html" class="footer-link">DIY Projects</a>
+        <a href="maintenance.html" class="footer-link">Maintenance</a>
+        <a href="pricing.html" class="footer-link">Pricing</a>
+        <a href="faq.html" class="footer-link">FAQs</a>
+        <a href="gallery.html" class="footer-link">Gallery</a>
+      </div>
+
+      
+      <div>
+        <div class="footer-col-title">Locations</div>
+        <a href="locations/frisco.html" class="footer-link">Frisco</a>
+        <a href="locations/plano.html" class="footer-link">Plano</a>
+        <a href="locations/mckinney.html" class="footer-link">McKinney</a>
+        <a href="locations/denton.html" class="footer-link">Denton</a>
+        <a href="locations/allen.html" class="footer-link">Allen</a>
+        <a href="locations/lewisville.html" class="footer-link">Lewisville</a>
+        <a href="locations/flower-mound.html" class="footer-link">Flower Mound</a>
+        <a href="locations/southlake.html" class="footer-link">Southlake</a>
+        <a href="service-areas.html" class="footer-link">All areas →</a>
+      </div>
+
+<div>
+        <div class="footer-col-title">Company</div>
+        <a href="about.html" class="footer-link">About Us</a>
+        <a href="reviews.html" class="footer-link">Reviews</a>
+        <a href="service-areas.html" class="footer-link">Service Areas</a>
+        <a href="emergency.html" class="footer-link">Emergency</a>
+        <a href="quote.html" class="footer-link">Free Estimate</a>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <a href="tel:+13235475086" class="footer-link">(323) 547-5086</a>
+        <a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="footer-link">WhatsApp</a>
+        <p class="footer-link" style="cursor:default;">Mon–Sun 7AM–8PM</p>
+        <p class="footer-link" style="cursor:default;">Denton &amp; North DFW</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 ELF Home Services  ·  Licensed &amp; Insured  ·  Dallas-Fort Worth, TX</div>
+      <div>Built with care in Texas</div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/13235475086" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.3L2 22l4.9-1.3A11 11 0 1 0 20.5 3.5zM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 20zm4.6-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.7-.3-1.5-.6-2.4-1.5-.8-.7-1.3-1.5-1.4-1.8 0-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.3 3.8 1.5.7 2.1.7 2.9.6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1z" fill="currentColor" stroke="none"/></svg></a>
+<script src="scripts.js"></script>
+<script>
+/* ===== BOOKING WIDGET LOGIC ===== */
+(function() {
+  'use strict';
+
+  // State
+  const booking = {
+    step: 1,
+    service: null,
+    serviceLabel: null,
+    date: null,        // ISO yyyy-mm-dd
+    dateLabel: null,   // human readable
+    time: null,        // morning|midday|afternoon|evening
+    timeLabel: null,   // "8:00 — 11:00 AM"
+    timeWindow: null,
+    name: '',
+    phone: '',
+    email: '',
+    city: '',
+    address: '',
+    details: '',
+    contactPref: 'text',
+  };
+
+  const SERVICE_LABELS = {
+    painting: 'Painting',
+    drywall: 'Drywall',
+    tile: 'Tile & Backsplash',
+    flooring: 'Flooring',
+    kitchen: 'Kitchen Remodel',
+    bathroom: 'Bathroom Remodel',
+    repairs: 'General Repairs',
+    appliances: 'Appliance Repair',
+    emergency: 'Emergency / Same-day',
+    other: 'Other / Multiple services',
+  };
+
+  const TIME_LABELS = {
+    morning: { label: 'Morning', window: '8:00 — 11:00 AM' },
+    midday: { label: 'Midday', window: '11:00 AM — 2:00 PM' },
+    afternoon: { label: 'Afternoon', window: '2:00 — 5:00 PM' },
+    evening: { label: 'Evening', window: '5:00 — 7:00 PM' },
+  };
+
+  const CONTACT_PREF_LABELS = {
+    text: 'Text message',
+    call: 'Phone call',
+    whatsapp: 'WhatsApp',
+    email: 'Email',
+  };
+
+  // Generate next 14 days
+  function generateDates() {
+    const row = document.getElementById('bookingDatesRow');
+    if (!row) return;
+    row.innerHTML = '';
+    const today = new Date();
+    today.setHours(0,0,0,0);
+    const weekdays = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+    for (let i = 0; i < 14; i++) {
+      const d = new Date(today);
+      d.setDate(today.getDate() + i);
+      const iso = d.toISOString().slice(0,10);
+      const card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'booking-date-card' + (i === 0 ? ' today' : '');
+      card.dataset.date = iso;
+      card.dataset.label = `${weekdays[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+      card.innerHTML = `
+        <span class="booking-date-weekday">${weekdays[d.getDay()]}</span>
+        <span class="booking-date-day">${d.getDate()}</span>
+        <span class="booking-date-month">${months[d.getMonth()]}</span>
+      `;
+      card.addEventListener('click', () => selectDate(card));
+      row.appendChild(card);
+    }
+  }
+
+  function selectDate(card) {
+    document.querySelectorAll('.booking-date-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    booking.date = card.dataset.date;
+    booking.dateLabel = card.dataset.label;
+    updateStep2NextState();
+  }
+
+  function selectTime(card) {
+    document.querySelectorAll('.booking-time-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    booking.time = card.dataset.time;
+    const t = TIME_LABELS[booking.time];
+    booking.timeLabel = t.label;
+    booking.timeWindow = t.window;
+    updateStep2NextState();
+  }
+
+  function updateStep2NextState() {
+    const btn = document.getElementById('bookingStep2Next');
+    if (!btn) return;
+    btn.disabled = !(booking.date && booking.time);
+  }
+
+  function selectService(card) {
+    document.querySelectorAll('.booking-service-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    booking.service = card.dataset.service;
+    booking.serviceLabel = SERVICE_LABELS[booking.service] || booking.service;
+    // Auto-advance after a short delay so the user sees the selection
+    setTimeout(() => goToStep(2), 220);
+  }
+
+  function goToStep(n) {
+    if (n < 1 || n > 4) return;
+
+    // Validate when moving forward
+    if (n > booking.step) {
+      if (booking.step === 1 && !booking.service) return;
+      if (booking.step === 2 && (!booking.date || !booking.time)) return;
+      if (booking.step === 3 && !validateStep3()) return;
+    }
+
+    booking.step = n;
+
+    // Update progress pills
+    document.querySelectorAll('.booking-step-pill').forEach((p, i) => {
+      p.classList.remove('active', 'complete');
+      const stepNum = parseInt(p.dataset.step);
+      if (stepNum === n) p.classList.add('active');
+      else if (stepNum < n) p.classList.add('complete');
+    });
+
+    // Show right panel
+    document.querySelectorAll('.booking-panel').forEach(p => p.classList.remove('active'));
+    const panel = document.getElementById('bookingStep' + n);
+    if (panel) panel.classList.add('active');
+
+    // Render summary if step 4
+    if (n === 4) renderSummary();
+
+    // Scroll to top of widget
+    const widget = document.getElementById('bookingProgress');
+    if (widget) {
+      const top = widget.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
+  function validateStep3() {
+    const form = document.getElementById('bookingForm');
+    if (!form) return false;
+
+    booking.name = document.getElementById('b-name').value.trim();
+    booking.phone = document.getElementById('b-phone').value.trim();
+    booking.email = document.getElementById('b-email').value.trim();
+    booking.city = document.getElementById('b-city').value;
+    booking.address = document.getElementById('b-address').value.trim();
+    booking.details = document.getElementById('b-details').value.trim();
+    const radio = document.querySelector('input[name="contactPref"]:checked');
+    booking.contactPref = radio ? radio.value : 'text';
+
+    if (!booking.name) {
+      alert('Please enter your name.');
+      document.getElementById('b-name').focus();
+      return false;
+    }
+    if (!booking.phone) {
+      alert('Please enter your phone number.');
+      document.getElementById('b-phone').focus();
+      return false;
+    }
+    if (!booking.city) {
+      alert('Please select your city.');
+      document.getElementById('b-city').focus();
+      return false;
+    }
+    return true;
+  }
+
+  function renderSummary() {
+    const summary = document.getElementById('bookingSummary');
+    if (!summary) return;
+    const rows = [
+      { label: 'Service', value: `<strong>${escapeHtml(booking.serviceLabel)}</strong>` },
+      { label: 'Date', value: `<strong>${escapeHtml(booking.dateLabel)}</strong>` },
+      { label: 'Time', value: `<strong>${escapeHtml(booking.timeLabel)}</strong> · ${escapeHtml(booking.timeWindow)}` },
+      { label: 'Name', value: escapeHtml(booking.name) },
+      { label: 'Phone', value: escapeHtml(booking.phone) },
+    ];
+    if (booking.email) rows.push({ label: 'Email', value: escapeHtml(booking.email) });
+    rows.push({ label: 'City', value: escapeHtml(booking.city) });
+    if (booking.address) rows.push({ label: 'Address', value: escapeHtml(booking.address) });
+    rows.push({ label: 'Best contact', value: escapeHtml(CONTACT_PREF_LABELS[booking.contactPref] || booking.contactPref) });
+    if (booking.details) rows.push({ label: 'Details', value: escapeHtml(booking.details).replace(/\n/g, '<br>') });
+
+    summary.innerHTML = rows.map(r => `
+      <div class="booking-summary-row">
+        <div class="booking-summary-label">${r.label}</div>
+        <div class="booking-summary-value">${r.value}</div>
+      </div>
+    `).join('');
+  }
+
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function buildBookingMessage() {
+    const lines = [
+      `BOOKING REQUEST · ELF Home Services`,
+      ``,
+      `Service: ${booking.serviceLabel}`,
+      `Date: ${booking.dateLabel}`,
+      `Time: ${booking.timeLabel} (${booking.timeWindow})`,
+      ``,
+      `Name: ${booking.name}`,
+      `Phone: ${booking.phone}`,
+      booking.email ? `Email: ${booking.email}` : null,
+      `City: ${booking.city}`,
+      booking.address ? `Address: ${booking.address}` : null,
+      `Best contact: ${CONTACT_PREF_LABELS[booking.contactPref] || booking.contactPref}`,
+      ``,
+      booking.details ? `Details:` : null,
+      booking.details ? booking.details : null,
+    ].filter(l => l !== null);
+    return lines.join('\n');
+  }
+
+  function submitViaEmail() {
+    const subject = `Booking Request — ${booking.serviceLabel} on ${booking.dateLabel}`;
+    const body = buildBookingMessage();
+    const mailto = `mailto:contact@elf.repair?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    showThankYou();
+  }
+
+  function submitViaWhatsApp() {
+    const text = buildBookingMessage();
+    const url = `https://wa.me/13235475086?text=${encodeURIComponent(text)}`;
+    window.open(url, '_blank', 'noopener');
+    showThankYou();
+  }
+
+  function showThankYou() {
+    // Replace step 4 panel with a simple thank you (still on the page)
+    const panel = document.getElementById('bookingStep4');
+    if (!panel) return;
+    panel.innerHTML = `
+      <div class="booking-panel-head" style="text-align:center;">
+        <div class="kicker">Booking sent</div>
+        <h2 class="booking-panel-title"><em>Thank you,</em> ${escapeHtml(booking.name.split(' ')[0] || 'friend')}.</h2>
+        <p class="booking-panel-sub" style="max-width:560px;">Your booking request is on the way to our team. You'll hear back via ${escapeHtml(CONTACT_PREF_LABELS[booking.contactPref].toLowerCase())} within an hour to confirm.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:var(--s-4);margin-top:var(--s-6);">
+        <div style="width:80px;height:80px;border-radius:50%;background:var(--rust);color:white;display:flex;align-items:center;justify-content:center;"><svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></div>
+        <div style="font-family:var(--font-mono);font-size:13px;color:var(--ink-mute);text-align:center;letter-spacing:0.04em;">SAVE THIS FOR YOUR RECORDS</div>
+        <div style="background:var(--bone);border:1px solid var(--line-soft);border-radius:var(--r-md);padding:var(--s-5);max-width:420px;width:100%;text-align:left;">
+          <div style="font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--ink);margin-bottom:8px;">${escapeHtml(booking.serviceLabel)}</div>
+          <div style="font-family:var(--font-sans);color:var(--ink-soft);line-height:1.6;">
+            <strong>${escapeHtml(booking.dateLabel)}</strong><br>
+            ${escapeHtml(booking.timeLabel)} (${escapeHtml(booking.timeWindow)})<br>
+            ${escapeHtml(booking.city)}
+          </div>
+        </div>
+        <div style="display:flex;gap:var(--s-3);flex-wrap:wrap;justify-content:center;margin-top:var(--s-4);">
+          <a href="index.html" class="btn btn-ghost btn-lg">← Back to home</a>
+          <a href="tel:+13235475086" class="btn btn-primary btn-lg">Call (323) 547-5086</a>
+        </div>
+      </div>
+    `;
+  }
+
+  // ===== EVENT BINDINGS =====
+  function init() {
+    // Service cards
+    document.querySelectorAll('.booking-service-card').forEach(card => {
+      card.addEventListener('click', () => selectService(card));
+    });
+
+    // Time cards
+    document.querySelectorAll('.booking-time-card').forEach(card => {
+      card.addEventListener('click', () => selectTime(card));
+    });
+
+    // Nav buttons
+    document.querySelectorAll('[data-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.action;
+        if (action === 'back') goToStep(booking.step - 1);
+        else if (action === 'next') goToStep(booking.step + 1);
+      });
+    });
+
+    // Submit buttons
+    const emailBtn = document.getElementById('bookingSubmitEmail');
+    const waBtn = document.getElementById('bookingSubmitWhatsApp');
+    if (emailBtn) emailBtn.addEventListener('click', submitViaEmail);
+    if (waBtn) waBtn.addEventListener('click', submitViaWhatsApp);
+
+    // Generate dates
+    generateDates();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body>
+</html>

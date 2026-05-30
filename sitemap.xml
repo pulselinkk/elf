@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://elf.repair/</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://elf.repair/service-areas.html</loc>
-    <lastmod>2026-05-24</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2026-05-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.86</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/guides/</loc>
+    <lastmod>2026-05-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://elf.repair/faq.html</loc>
@@ -272,7 +278,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/bathroom-remodel-cost-north-texas.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -296,7 +302,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/cabinet-painting-cost-vs-replacement.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -314,7 +320,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/deck-refinishing-cost-texas.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -326,7 +332,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/drywall-repair-cost-dfw.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -362,7 +368,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/handyman-hourly-rate-dfw-2026.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -386,7 +392,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/home-renovation-cost-guide-dfw.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -416,13 +422,13 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/interior-painting-cost-per-room-dfw.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
   <url>
     <loc>https://elf.repair/guides/kitchen-remodel-cost-dfw.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -434,7 +440,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/lvp-flooring-cost-per-sqft-texas.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -548,7 +554,7 @@
   </url>
   <url>
     <loc>https://elf.repair/guides/tile-installation-cost-dfw.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.82</priority>
   </url>
@@ -662,7 +668,7 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/bathroom-remodel-allen-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -674,7 +680,7 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/bathroom-remodel-lewisville-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -698,13 +704,13 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/drywall-repair-mckinney-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://elf.repair/locations/flooring-installation-denton-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -716,7 +722,7 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/handyman-allen-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -734,19 +740,19 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/hardwood-flooring-plano-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://elf.repair/locations/kitchen-remodel-allen-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
   <url>
     <loc>https://elf.repair/locations/kitchen-remodel-plano-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -758,7 +764,7 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/painting-contractor-frisco-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>
@@ -776,7 +782,7 @@
   </url>
   <url>
     <loc>https://elf.repair/locations/tile-installation-southlake-tx.html</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.86</priority>
   </url>

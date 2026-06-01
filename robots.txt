@@ -12,3 +12,4 @@ Disallow: /workpedia/07-page-factory/
 Disallow: /workpedia/08-backlog/
 
 Sitemap: https://elf.repair/sitemap.xml
+Sitemap: https://elf.repair/elf-property-pros/sitemap.xml

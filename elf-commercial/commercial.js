@@ -11,6 +11,10 @@
   };
   function setText(id, text){ const el = document.getElementById(id); if(el) el.textContent = text; }
   function encodeBrief(text){ return 'https://wa.me/'+phone+'?text='+encodeURIComponent(text); }
+  function bindInputs(root, selector, update){
+    $$(selector, root).forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); });
+    update();
+  }
   function initDispatch(){
     const app = $('[data-commercial-app]');
     if(!app) return;
@@ -39,8 +43,7 @@
       const wa = $('#cc-whatsapp'); if(wa) wa.href = encodeBrief('ELF Commercial dispatch request: '+brief);
       const status = $('[data-cc-status]'); if(status) status.textContent = priority;
     }
-    $$('select,input', app).forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); });
-    update();
+    bindInputs(app, 'select,input', update);
   }
   function initDowntime(){
     const app = $('[data-downtime-app]'); if(!app) return;
@@ -52,7 +55,7 @@
       const note = 'At '+money.format(revenue)+' daily revenue, '+hours+' affected hours can put about '+money.format(cost)+' at risk. Urgency score '+score+'/100.';
       setText('dt-cost', money.format(cost)); setText('dt-score', score+'/100'); setText('dt-note', note);
     }
-    $$('select,input', app).forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); }); update();
+    bindInputs(app, 'select,input', update);
   }
   function initMaintenance(){
     const app = $('[data-maintenance-app]'); if(!app) return;
@@ -65,7 +68,84 @@
       setText('mt-rhythm', rhythm); setText('mt-reserve', money.format(reserve)); setText('mt-visits', visits); setText('mt-band', band);
       setText('mt-note', sites+' location'+(sites>1?'s':'')+' and '+size.toLocaleString()+' sq ft suggest a '+rhythm.toLowerCase()+' with about '+money.format(reserve)+' monthly repair reserve planning.');
     }
-    $$('[data-maintenance-input]', app).forEach(el => { el.addEventListener('input', update); el.addEventListener('change', update); }); update();
+    bindInputs(app, '[data-maintenance-input]', update);
+  }
+  function initVendor(){
+    const app = $('[data-vendor-app]'); if(!app) return;
+    function update(){
+      const spaces = Math.max(1,val('vp-spaces',8)), tickets = Math.max(0,val('vp-tickets',5));
+      const paper = $('#vp-paper')?.value || 'basic';
+      const billing = $('#vp-billing')?.value || 'cod';
+      let score = 44 + Math.min(24, spaces * 2) + Math.min(16, tickets * 2);
+      if(paper === 'coi') score += 8; if(paper === 'additional') score += 16;
+      if(billing === 'net15') score += 6; if(billing === 'net30') score += 10;
+      score = Math.min(100, score);
+      const escalation = tickets > 10 || paper === 'additional' ? 'Account lead' : tickets > 4 ? 'Priority queue' : 'Standard';
+      const report = paper === 'additional' || billing === 'net30' ? 'Owner-ready' : paper === 'coi' ? 'COI-ready' : 'Basic';
+      const fit = score > 82 ? 'Excellent' : score > 66 ? 'Strong' : 'Good';
+      setText('vp-score', score+'%'); setText('vp-escalation', escalation); setText('vp-report', report); setText('vp-fit', fit);
+      setText('vp-note', spaces+' managed space'+(spaces>1?'s':'')+' with '+tickets+' open ticket'+(tickets!==1?'s':'')+' should start with '+report.toLowerCase()+' documentation, '+escalation.toLowerCase()+' routing, and confirmed approval limits before dispatch.');
+    }
+    bindInputs(app, '[data-vendor-input]', update);
+  }
+  function initRoute(){
+    const app = $('[data-route-app]'); if(!app) return;
+    function update(){
+      const sites = Math.max(2,val('rp-sites',12)), cities = Math.max(1,val('rp-cities',5));
+      const cadence = $('#rp-cadence')?.value || 'monthly';
+      const priority = $('#rp-priority')?.value || 'standard';
+      const cadenceVisits = { quarterly:4, monthly:12, biweekly:26, weekly:52 }[cadence] || 12;
+      const waves = Math.max(1, Math.ceil(sites / Math.max(3, Math.ceil(10 / cities))));
+      const visits = sites * cadenceVisits;
+      const sla = priority === 'emergency' ? '24/7 triage' : priority === 'rush' ? 'Rush + route' : 'Route SLA';
+      const load = visits > 700 ? 'Heavy' : visits > 240 ? 'Active' : 'Managed';
+      setText('rp-waves', waves); setText('rp-visits', visits); setText('rp-sla', sla); setText('rp-load', load);
+      setText('rp-note', sites+' locations across '+cities+' DFW submarkets create about '+waves+' route wave'+(waves>1?'s':'')+' and '+visits+' annual planned visits at a '+cadence+' cadence.');
+    }
+    bindInputs(app, '[data-route-input]', update);
+  }
+  function initFinish(){
+    const app = $('[data-finish-app]'); if(!app) return;
+    function update(){
+      const area = Math.max(25,val('fp-area',650)), damage = val('fp-damage',1), colors = Math.max(1,val('fp-colors',2)), access = val('fp-access',1);
+      const gallons = Math.max(1, Math.ceil((area / 325) * (damage > 1.5 ? 1.4 : 1)));
+      const phases = Math.max(1, Math.ceil((damage * colors * access) / 1.8));
+      const low = (area * 1.65 + colors * 95 + gallons * 48) * damage * access;
+      const high = low * 1.55;
+      const risk = phases > 3 ? 'High' : phases > 1 ? 'Managed' : 'Low';
+      setText('fp-gallons', gallons+' gal'); setText('fp-phases', phases); setText('fp-risk', risk); setText('fp-range', money.format(low)+' - '+money.format(high));
+      setText('fp-note', area.toLocaleString()+' sq ft with '+colors+' color'+(colors>1?'s':'')+' suggests '+gallons+' gallon reserve, '+phases+' work phase'+(phases>1?'s':'')+', and '+risk.toLowerCase()+' finish-risk planning.');
+    }
+    bindInputs(app, '[data-finish-input]', update);
+  }
+  function initFlooring(){
+    const app = $('[data-flooring-app]'); if(!app) return;
+    function update(){
+      const area = Math.max(20,val('fl-area',420)), traffic = val('fl-traffic',1);
+      const type = $('#fl-type')?.value || 'tile';
+      const win = $('#fl-window')?.value || 'open';
+      const waste = type === 'transition' ? 8 : type === 'tile' ? 12 : type === 'lvp' ? 10 : 7;
+      const duration = Math.max(1, Math.ceil((area / (win === 'closed' ? 520 : win === 'after' ? 360 : 240)) * traffic));
+      const risk = traffic > 1.4 || win === 'open' ? 'High visibility' : duration > 2 ? 'Managed' : 'Low';
+      const access = win === 'after' ? 'After-hours' : win === 'closed' ? 'Closed block' : 'Barricade';
+      setText('fl-waste', waste+'%'); setText('fl-access', access); setText('fl-risk', risk); setText('fl-duration', duration+' day'+(duration>1?'s':''));
+      setText('fl-note', area.toLocaleString()+' sq ft of '+type+' repair should plan for about '+waste+'% waste, '+access.toLowerCase()+' access, and '+duration+' work day'+(duration>1?'s':'')+' before closeout.');
+    }
+    bindInputs(app, '[data-flooring-input]', update);
+  }
+  function initAda(){
+    const app = $('[data-ada-app]'); if(!app) return;
+    function update(){
+      const entry = val('ada-entry',0), restroom = val('ada-restroom',0), reach = val('ada-reach',0);
+      const urgency = $('#ada-urgency')?.value || 'standard';
+      let score = entry * 18 + restroom * 20 + reach * 14 + (urgency === 'inspection' ? 30 : urgency === 'soon' ? 16 : 4);
+      const priority = score > 72 ? 'Critical review' : score > 44 ? 'High' : score > 18 ? 'Medium' : 'Standard';
+      const scopeClass = score > 58 ? 'Mixed scope' : score > 24 ? 'Punch + review' : 'Punch';
+      const flag = entry === 2 || restroom === 2 || urgency === 'inspection' ? 'Specialist' : score > 30 ? 'Review' : 'Low';
+      setText('ada-priority', priority); setText('ada-class', scopeClass); setText('ada-flag', flag); setText('ada-packet', flag === 'Specialist' ? 'Photos + notes' : 'Photos');
+      setText('ada-note', 'ADA punch scan score '+score+'/100. Start with photos, measurements, visible barriers, and clear separation between practical punch work and code-heavy specialist review.');
+    }
+    bindInputs(app, '[data-ada-input]', update);
   }
   function initChecks(){
     const app = $('.check-app'); if(!app) return;
@@ -77,10 +157,18 @@
   }
   function initFilters(){
     const root = $('[data-service-filter]'); if(!root) return;
-    root.addEventListener('click', e => { const btn = e.target.closest('[data-filter]'); if(!btn) return; $$('[data-filter]', root).forEach(b=>b.classList.remove('active')); btn.classList.add('active'); const filter = btn.dataset.filter; $$('[data-service-card]').forEach(card => { card.hidden = filter !== 'all' && card.dataset.type !== filter; }); });
+    root.addEventListener('click', e => {
+      const btn = e.target.closest('[data-filter]'); if(!btn) return;
+      $$('[data-filter]', root).forEach(b=>b.classList.remove('active')); btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      $$('[data-service-card]').forEach(card => {
+        const groups = (card.dataset.type || '').split(/\s+/);
+        card.hidden = filter !== 'all' && !groups.includes(filter);
+      });
+    });
   }
   function initCopy(){
     document.addEventListener('click', async e => { const btn = e.target.closest('[data-copy-commercial]'); if(!btn) return; const id = btn.dataset.copyCommercial; const text = document.getElementById(id)?.textContent || ''; try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; setTimeout(()=>btn.textContent='Copy brief',1300); } catch { btn.textContent = 'Brief ready'; setTimeout(()=>btn.textContent='Copy brief',1300); } });
   }
-  document.addEventListener('DOMContentLoaded', () => { initDispatch(); initDowntime(); initMaintenance(); initChecks(); initFilters(); initCopy(); });
+  document.addEventListener('DOMContentLoaded', () => { initDispatch(); initDowntime(); initMaintenance(); initVendor(); initRoute(); initFinish(); initFlooring(); initAda(); initChecks(); initFilters(); initCopy(); });
 })();

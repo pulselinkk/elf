@@ -816,4 +816,52 @@
     <changefreq>monthly</changefreq>
     <priority>0.88</priority>
   </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.94</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/facility-maintenance-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/tenant-improvements-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/retail-maintenance-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/restaurant-repairs-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/office-repairs-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://elf.repair/elf-commercial/commercial/emergency-repairs-dfw.html</loc>
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
 </urlset>

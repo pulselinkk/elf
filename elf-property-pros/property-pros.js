@@ -76,4 +76,11 @@
     setText('pp-route', visit);
   }
   updatePortfolio();
+
+  function updateMobileActions(){
+    document.body.classList.toggle('show-mobile-actions', window.scrollY > 360);
+  }
+  window.addEventListener('scroll', updateMobileActions, { passive: true });
+  window.addEventListener('resize', updateMobileActions);
+  updateMobileActions();
 })();

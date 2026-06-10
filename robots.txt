@@ -14,3 +14,4 @@ Disallow: /workpedia/08-backlog/
 Sitemap: https://elf.repair/sitemap.xml
 Sitemap: https://elf.repair/elf-property-pros/sitemap.xml
 Sitemap: https://elf.repair/elf-commercial/sitemap.xml
+Sitemap: https://elf.repair/image-sitemap.xml

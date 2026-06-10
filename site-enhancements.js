@@ -510,27 +510,34 @@
     if (!bar) return;
     var max = document.documentElement.scrollHeight - window.innerHeight;
     var pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    var hasActions = !!document.querySelector('.mobile-action-bar');
     bar.style.width = Math.max(0, Math.min(100, pct)) + '%';
-    document.body.classList.toggle('show-mobile-actions', window.scrollY > 360);
+    document.body.classList.toggle('has-mobile-actions', hasActions);
+    document.body.classList.toggle('show-mobile-actions', hasActions && window.scrollY > 360);
   }
 
   function ensureMobileActions(rel) {
-    if (!document.querySelector('link[href*="styles.css"]')) return;
+    if (!usesMainStyles()) return;
     if (document.querySelector('.mobile-action-bar')) return;
     var bar = document.createElement('div');
     bar.className = 'mobile-action-bar';
     bar.setAttribute('aria-label', 'Quick actions');
     bar.innerHTML = '<a href="#page-enhancement">Tools</a><a href="tel:+13235475086">Call</a><a href="' + rel + 'quote.html">Estimate</a>';
     document.body.appendChild(bar);
+    document.body.classList.add('has-mobile-actions');
   }
 
   function ensureEstimateFallbackStyles() {
-    if (document.querySelector('link[href*="styles.css"]')) return;
+    if (usesMainStyles()) return;
     if (document.getElementById('elf-enhance-fallback-style')) return;
     var style = document.createElement('style');
     style.id = 'elf-enhance-fallback-style';
     style.textContent = '.scroll-progress{position:fixed;top:0;left:0;right:0;height:3px;z-index:9999}.scroll-progress span{display:block;width:0;height:100%;background:#d4a02a}.elf-enhance{padding:28px 24px;background:#111;color:#f5f2ec}.elf-enhance .container{max-width:1180px;margin:0 auto}.elf-enhance-shell{border:1px solid rgba(245,242,236,.16);border-radius:12px;background:rgba(255,255,255,.06);padding:24px}.elf-enhance-head{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:20px}.elf-enhance-kicker,.elf-tool-label{font:700 10px/1.2 monospace;letter-spacing:.12em;text-transform:uppercase;color:#d4a02a}.elf-enhance h2{font-size:34px;line-height:1;margin:8px 0 0}.elf-enhance p{color:rgba(245,242,236,.72)}.elf-enhance-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.elf-mini-card,.elf-tool{border:1px solid rgba(245,242,236,.14);border-radius:8px;background:rgba(255,255,255,.06);padding:18px}.elf-mini-card h3{margin:0 0 8px}.elf-tool button,.elf-tool select,.elf-tool input{min-height:42px;border-radius:8px;border:1px solid rgba(245,242,236,.18);background:#1d1d1b;color:#f5f2ec;padding:0 12px}.elf-tool button.active{background:#d4a02a;color:#111}.elf-tool-stack{display:grid;gap:10px}.elf-result{margin-top:14px;padding:14px;border-radius:8px;background:rgba(212,160,42,.14)}@media(max-width:800px){.elf-enhance-head,.elf-enhance-grid{grid-template-columns:1fr}}';
     document.head.appendChild(style);
+  }
+
+  function usesMainStyles() {
+    return !!document.querySelector('link[href*="styles.css"], link[href*="styles.min.css"]');
   }
 
   function renderPage(config, rel) {

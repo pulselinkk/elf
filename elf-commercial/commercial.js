@@ -77,11 +77,11 @@
       const paper = $('#vp-paper')?.value || 'basic';
       const billing = $('#vp-billing')?.value || 'cod';
       let score = 44 + Math.min(24, spaces * 2) + Math.min(16, tickets * 2);
-      if(paper === 'coi') score += 8; if(paper === 'additional') score += 16;
-      if(billing === 'net15') score += 6; if(billing === 'net30') score += 10;
+      if(paper === 'vendor') score += 8; if(paper === 'additional') score += 16;
+      if(billing === 'net15') score += 6; if(billing === 'account') score += 10;
       score = Math.min(100, score);
       const escalation = tickets > 10 || paper === 'additional' ? 'Account lead' : tickets > 4 ? 'Priority queue' : 'Standard';
-      const report = paper === 'additional' || billing === 'net30' ? 'Owner-ready' : paper === 'coi' ? 'COI-ready' : 'Basic';
+      const report = paper === 'additional' || billing === 'account' ? 'Owner-ready' : paper === 'vendor' ? 'Vendor-ready' : 'Basic';
       const fit = score > 82 ? 'Excellent' : score > 66 ? 'Strong' : 'Good';
       setText('vp-score', score+'%'); setText('vp-escalation', escalation); setText('vp-report', report); setText('vp-fit', fit);
       setText('vp-note', spaces+' managed space'+(spaces>1?'s':'')+' with '+tickets+' open ticket'+(tickets!==1?'s':'')+' should start with '+report.toLowerCase()+' documentation, '+escalation.toLowerCase()+' routing, and confirmed approval limits before dispatch.');

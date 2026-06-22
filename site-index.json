@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-10T01:50:36.311Z",
-  "count": 162,
+  "generatedAt": "2026-06-20T12:00:00.000Z",
+  "count": 163,
   "items": [
     {
       "href": "index.html",
@@ -1324,6 +1324,15 @@
       "category": "Resource",
       "image": "assets/generated/services-repairs-punch-list-16x9-v1.webp",
       "keywords": "Home Maintenance Schedule | DFW Seasonal Checklist The DFW seasonal maintenance schedule. Complete seasonal home maintenance schedule for Dallas-Fort Worth homeowners. Spring, summer, fall, winter checklists. Monthly tasks. Annual services.  maintenance html"
+    },
+    {
+      "href": "configurator.html",
+      "title": "DFW Remodel Cost Planner | ELF Home Services",
+      "h1": "Shape the project. See the range.",
+      "description": "Build a private, no-signup planning range for a kitchen, bathroom, room, exterior, or whole-home remodel in North DFW.",
+      "category": "Resource",
+      "image": "assets/generated/services-kitchen-remodel-after-16x9-v1.webp",
+      "keywords": "DFW remodel cost planner project budget kitchen bathroom room exterior whole home North DFW configurator"
     },
     {
       "href": "pricing.html",

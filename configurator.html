@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DFW Remodel Cost Planner | ELF Home Services</title>
+<meta name="description" content="Build a private, no-signup planning range for a kitchen, bathroom, room, exterior, or whole-home remodel in North DFW.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="ELF Home Services">
+<meta name="geo.region" content="US-TX">
+<meta name="geo.placename" content="Dallas-Fort Worth">
+<link rel="canonical" href="https://elf.repair/configurator.html">
+<link rel="icon" type="image/png" href="assets/brand/elf-home-services-logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ELF Home Services">
+<meta property="og:title" content="DFW Remodel Cost Planner | ELF Home Services">
+<meta property="og:description" content="Choose a space, scope, features, and size to build a useful North DFW remodeling planning range.">
+<meta property="og:url" content="https://elf.repair/configurator.html">
+<meta property="og:image" content="https://elf.repair/assets/generated/services-kitchen-remodel-after-16x9-v1.webp">
+<meta property="og:image:alt" content="Finished modern kitchen remodel in North DFW">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DFW Remodel Cost Planner | ELF Home Services">
+<meta name="twitter:description" content="Build a private, no-signup remodel planning range in a few steps.">
+<meta name="twitter:image" content="https://elf.repair/assets/generated/services-kitchen-remodel-after-16x9-v1.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="configurator.min.css?v=1">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"DFW Remodel Cost Planner","url":"https://elf.repair/configurator.html","applicationCategory":"BusinessApplication","operatingSystem":"Any","description":"A private planning tool for exploring preliminary remodeling cost ranges in North DFW.","isAccessibleForFree":true,"provider":{"@id":"https://elf.repair/#business"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://elf.repair/"},{"@type":"ListItem","position":2,"name":"Remodel Cost Planner","item":"https://elf.repair/configurator.html"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is this range a contractor quote?","acceptedAnswer":{"@type":"Answer","text":"No. It is an early planning range based on the choices entered. A written quote requires a review of the existing conditions, dimensions, materials, access, and final scope."}},{"@type":"Question","name":"Do I need to enter contact information?","acceptedAnswer":{"@type":"Answer","text":"No. The planner works without an account or contact details, and the project draft stays in the browser unless the user chooses to share it."}},{"@type":"Question","name":"What can change a remodeling price?","acceptedAnswer":{"@type":"Answer","text":"Layout changes, concealed damage, plumbing or electrical relocation, structural work, permits, material selection, site access, and finish complexity can all change the final price."}},{"@type":"Question","name":"Can I send my plan to ELF Home Services?","acceptedAnswer":{"@type":"Answer","text":"Yes. The final screen can copy the project brief, open a prefilled WhatsApp message, or transfer the choices into the quote request form."}}]}]}</script>
+</head>
+<body>
+<a class="skip-link" href="#planner">Skip to planner</a>
+
+<header class="planner-header">
+  <div class="planner-header-inner">
+    <a class="planner-brand" href="index.html" aria-label="ELF Home Services home">
+      <img src="assets/brand/elf-home-services-logo.png" width="56" height="56" alt="ELF Home Services logo">
+      <span><strong>ELF</strong><small>Project planner</small></span>
+    </a>
+    <nav class="planner-nav" aria-label="Primary navigation">
+      <a href="services.html">Services</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="header-cta" href="quote.html">Request quote</a>
+    </nav>
+  </div>
+</header>
+
+<main id="planner">
+  <section class="planner-intro" aria-labelledby="planner-title">
+    <div>
+      <p class="eyebrow">North DFW remodel planning tool</p>
+      <h1 id="planner-title">Shape the project. See the range.</h1>
+      <p>Build a practical early budget in about two minutes. No signup, no hidden result, and nothing is sent unless you choose to share it.</p>
+    </div>
+    <div class="intro-notes">
+      <span>Private by default</span>
+      <span>Editable anytime</span>
+      <span>Planning range, not a quote</span>
+    </div>
+  </section>
+
+  <section class="planner-shell" aria-label="Remodel cost planner workspace">
+    <div class="planner-main">
+      <div class="progress-wrap">
+        <div class="progress-copy"><span id="progress-label">Step 1 of 4</span><span id="progress-name">Choose a space</span></div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+      </div>
+
+      <div class="planner-status" id="planner-status" role="status" aria-live="polite"></div>
+
+      <section class="planner-screen is-active" data-screen="1" aria-labelledby="space-heading">
+        <div class="screen-heading">
+          <p class="step-label">01 / Space</p>
+          <h2 id="space-heading" tabindex="-1">What are you planning?</h2>
+          <p>Choose the area that best represents the main scope. You can explain connected work in the final brief.</p>
+        </div>
+        <div class="choice-grid choice-grid-spaces" id="space-options"></div>
+      </section>
+
+      <section class="planner-screen" data-screen="2" aria-labelledby="scope-heading" hidden>
+        <div class="screen-heading">
+          <p class="step-label">02 / Scope</p>
+          <h2 id="scope-heading" tabindex="-1">How far should the work go?</h2>
+          <p>This choice has the largest effect on the planning range.</p>
+        </div>
+        <div class="scope-grid" id="scope-options"></div>
+      </section>
+
+      <section class="planner-screen" data-screen="3" aria-labelledby="details-heading" hidden>
+        <div class="screen-heading">
+          <p class="step-label">03 / Inclusions</p>
+          <h2 id="details-heading" tabindex="-1">What should the plan include?</h2>
+          <p>Select every item that may be part of the project. These are planning signals, not a final scope of work.</p>
+        </div>
+        <div class="detail-grid" id="detail-options"></div>
+      </section>
+
+      <section class="planner-screen" data-screen="4" aria-labelledby="size-heading" hidden>
+        <div class="screen-heading">
+          <p class="step-label">04 / Scale and timing</p>
+          <h2 id="size-heading" tabindex="-1">Set the project scale.</h2>
+          <p>Use the closest fit. An on-site review will replace these assumptions with measured quantities.</p>
+        </div>
+        <fieldset class="choice-fieldset">
+          <legend>Approximate size</legend>
+          <div class="size-grid" id="size-options"></div>
+        </fieldset>
+        <fieldset class="choice-fieldset">
+          <legend>Preferred timing <span>(does not change the range)</span></legend>
+          <div class="timeline-grid" id="timeline-options"></div>
+        </fieldset>
+      </section>
+
+      <section class="planner-screen result-screen" data-screen="5" aria-labelledby="result-heading" hidden>
+        <div class="result-head">
+          <div>
+            <p class="step-label">Your planning brief</p>
+            <h2 id="result-heading" tabindex="-1">A useful starting point.</h2>
+          </div>
+          <button class="text-button" type="button" id="edit-plan">Edit choices</button>
+        </div>
+
+        <div class="result-range" aria-live="polite">
+          <span>Preliminary planning range</span>
+          <strong id="result-price">$0 - $0</strong>
+          <p id="result-context"></p>
+        </div>
+
+        <div class="result-layout">
+          <div>
+            <h3>Project brief</h3>
+            <dl class="brief-list" id="result-brief"></dl>
+          </div>
+          <div>
+            <h3>Range factors</h3>
+            <div class="factor-list" id="result-factors"></div>
+          </div>
+        </div>
+
+        <div class="assumptions">
+          <h3>What this range assumes</h3>
+          <p>Typical North DFW access and working conditions, standard preparation, and readily available mid-market materials. It does not price concealed damage, engineering, structural changes, permit fees, hazardous-material remediation, specialty fabrication, or major utility relocation.</p>
+        </div>
+
+        <div class="result-actions">
+          <a class="primary-action" id="quote-link" href="quote.html">Request a written quote</a>
+          <a class="secondary-action" id="whatsapp-link" href="https://wa.me/13235475086" target="_blank" rel="noopener">Share on WhatsApp</a>
+          <button class="secondary-action" type="button" id="copy-brief">Copy project brief</button>
+          <button class="icon-action" type="button" id="print-plan" aria-label="Print project plan" title="Print project plan">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          </button>
+          <button class="text-button reset-action" type="button" id="reset-plan">Start over</button>
+        </div>
+      </section>
+
+      <div class="planner-controls" id="planner-controls">
+        <button class="back-button" type="button" id="back-button" disabled>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back
+        </button>
+        <button class="next-button" type="button" id="next-button" disabled>
+          Continue
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <aside class="planner-preview" aria-label="Current project summary">
+      <div class="preview-image-wrap">
+        <img id="preview-image" src="assets/generated/services-kitchen-remodel-after-16x9-v1.webp" width="640" height="360" alt="Finished kitchen remodel">
+        <span id="preview-space-label">Choose a space</span>
+      </div>
+      <div class="preview-body">
+        <p class="preview-kicker">Live project summary</p>
+        <h2 id="preview-title">Your plan starts here.</h2>
+        <p id="preview-copy">Select a space to build a project profile and preliminary planning range.</p>
+        <dl class="preview-selections">
+          <div><dt>Space</dt><dd id="preview-space">Not selected</dd></div>
+          <div><dt>Scope</dt><dd id="preview-scope">Not selected</dd></div>
+          <div><dt>Inclusions</dt><dd id="preview-details">None yet</dd></div>
+          <div><dt>Scale</dt><dd id="preview-size">Not selected</dd></div>
+        </dl>
+        <div class="preview-range">
+          <span>Planning range</span>
+          <strong id="preview-price">Complete four steps</strong>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="method-section" aria-labelledby="method-heading">
+    <div class="method-intro">
+      <p class="eyebrow">Read the range correctly</p>
+      <h2 id="method-heading">A planning tool, with the uncertainty left visible.</h2>
+      <p>The calculator helps compare scope choices before an estimate. It intentionally avoids pretending that finish selections and hidden conditions can be priced from four clicks.</p>
+    </div>
+    <div class="method-grid">
+      <article><span>01</span><h3>Start with scope</h3><p>Refreshing finishes and rebuilding a room are different projects. The planner keeps that distinction explicit.</p></article>
+      <article><span>02</span><h3>Add real variables</h3><p>Selections, dimensions, access, utility movement, and existing conditions narrow the range during review.</p></article>
+      <article><span>03</span><h3>Confirm in writing</h3><p>ELF reviews the site and documents the agreed scope before work begins. The written quote replaces this range.</p></article>
+    </div>
+  </section>
+
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <div>
+      <p class="eyebrow">Planner questions</p>
+      <h2 id="faq-heading">Before you use the number.</h2>
+    </div>
+    <div class="faq-list">
+      <details><summary>Is this range a contractor quote?</summary><p>No. It is an early planning range based on your selections. A written quote requires a review of dimensions, existing conditions, access, materials, and final scope.</p></details>
+      <details><summary>Do I need to enter contact information?</summary><p>No. The planner works without an account or contact details. Your draft remains in this browser unless you choose to share it.</p></details>
+      <details><summary>What can change the final price?</summary><p>Layout changes, concealed damage, plumbing or electrical relocation, structural work, permits, material selection, site access, and finish complexity can all change the price.</p></details>
+      <details><summary>Can I send my plan to ELF?</summary><p>Yes. The final screen can copy the brief, open a prefilled WhatsApp message, or transfer the choices into the quote request form.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer class="planner-footer">
+  <div>
+    <a class="footer-brand" href="index.html">ELF Home Services</a>
+    <p>Denton-based home repair and remodel service serving North DFW.</p>
+  </div>
+  <nav aria-label="Footer navigation">
+    <a href="services.html">Services</a>
+    <a href="service-areas.html">Service areas</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="quote.html">Estimate</a>
+  </nav>
+  <div class="footer-contact"><a href="tel:+13235475086">(323)&nbsp;547&#8209;5086</a><span>Mon-Sun 7AM-8PM</span></div>
+</footer>
+
+<noscript><div class="noscript-message">This planning tool needs JavaScript. You can still request a free written estimate on the <a href="quote.html">quote page</a>.</div></noscript>
+<script src="configurator.min.js?v=1"></script>
+</body>
+</html>
